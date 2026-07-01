@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(swift /private/tmp/claude-502/-Users-white-Documents-Code-tropifish/6f6bb426-c520-4520-a291-67726123db32/scratchpad/ammonia_check.swift)",
+      "Bash(python3 *)",
+      "Bash(xcodebuild -version)",
+      "Bash(/usr/bin/plutil -lint TropiFish.xcodeproj/project.pbxproj)",
+      "Bash(/usr/bin/plutil -lint TropiFish.xcodeproj/xcshareddata/xcschemes/TropiFish.xcscheme)",
+      "Bash(xcodebuild -list -project TropiFish.xcodeproj)",
+      "Bash(xcodebuild -license check)",
+      "Bash(echo \"exit: $?\")"
+    ]
+  }
+}
