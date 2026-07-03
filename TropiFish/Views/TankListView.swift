@@ -26,12 +26,19 @@ struct TankListView: View {
                     }
                 } else {
                     List {
-                        ForEach(tanks) { tank in
-                            NavigationLink(value: tank) {
-                                TankRow(tank: tank)
+                        HomeSummaryCard(tanks: tanks)
+                            .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 12, trailing: 16))
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear)
+
+                        Section("Tanks") {
+                            ForEach(tanks) { tank in
+                                NavigationLink(value: tank) {
+                                    TankRow(tank: tank)
+                                }
                             }
+                            .onDelete(perform: deleteTanks)
                         }
-                        .onDelete(perform: deleteTanks)
                     }
                 }
             }
