@@ -48,25 +48,35 @@ struct SpeciesDetailView: View {
     // MARK: - Header
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            SpeciesImage(species: species, cornerRadius: 16)
+        VStack(alignment: .leading, spacing: 10) {
+            SpeciesImage(species: species, cornerRadius: 18)
                 .frame(maxWidth: .infinity)
-                .frame(height: 220)
-            if let credit = species.imageCredit {
-                Text("Photo: \(credit.author) · \(credit.license)")
-                    .font(.caption2)
-                    .foregroundStyle(.tertiary)
-            }
-            Text(species.commonName)
-                .font(.title2.bold())
-            Text(species.scientificName)
-                .font(.subheadline)
-                .italic()
-                .foregroundStyle(.secondary)
-            if !species.alsoKnownAs.isEmpty {
-                Text("Also known as: \(species.alsoKnownAs.joined(separator: ", "))")
-                    .font(.caption)
+                .frame(height: 230)
+                .overlay(alignment: .bottomTrailing) {
+                    if let credit = species.imageCredit {
+                        Text("\(credit.author) · \(credit.license)")
+                            .font(.caption2)
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(.black.opacity(0.35), in: Capsule())
+                            .padding(8)
+                    }
+                }
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text(species.commonName)
+                    .font(.title.bold())
+                Text(species.scientificName)
+                    .font(.subheadline)
+                    .italic()
                     .foregroundStyle(.secondary)
+                if !species.alsoKnownAs.isEmpty {
+                    Text("Also known as: \(species.alsoKnownAs.joined(separator: ", "))")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .padding(.top, 2)
+                }
             }
         }
     }

@@ -15,16 +15,22 @@ struct SpeciesImage: View {
     }
 
     var body: some View {
-        Group {
-            if let bundledImage {
-                bundledImage
-                    .resizable()
-                    .scaledToFill()
-            } else {
-                placeholder
+        // `Color.clear` takes whatever frame the caller sets; the image fills it
+        // as an overlay and is hard-clipped to those bounds. Without this, a
+        // `scaledToFill` photo overflows its frame and bleeds past the row/hero
+        // edges (the clip must come *after* the caller's `.frame`, not before).
+        Color.clear
+            .overlay {
+                if let bundledImage {
+                    bundledImage
+                        .resizable()
+                        .scaledToFill()
+                } else {
+                    placeholder
+                }
             }
-        }
-        .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+            .contentShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
     }
 
     private var placeholder: some View {

@@ -65,32 +65,37 @@ struct SpeciesRow: View {
     var compatibilityTank: Tank?
 
     var body: some View {
-        HStack(spacing: 12) {
-            SpeciesImage(species: species, cornerRadius: 8)
-                .frame(width: 56, height: 56)
+        HStack(spacing: 14) {
+            SpeciesImage(species: species, cornerRadius: 10)
+                .frame(width: 60, height: 60)
 
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text(species.commonName)
-                    .font(.body)
+                    .font(.headline)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.85)
                 Text(species.scientificName)
                     .font(.caption)
                     .italic()
                     .foregroundStyle(.secondary)
+                    .lineLimit(1)
                 HStack(spacing: 6) {
                     Tag(text: species.careLevel.displayName)
                     Tag(text: species.temperament.displayName)
                 }
+                .padding(.top, 1)
             }
 
-            Spacer()
+            Spacer(minLength: 8)
 
             if let tank = compatibilityTank {
                 let light = CompatibilityEngine.assess(candidate: species, against: tank).overall
                 Image(systemName: light.systemImage)
+                    .font(.subheadline)
                     .foregroundStyle(light.color)
             }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 6)
     }
 }
 
@@ -99,10 +104,11 @@ private struct Tag: View {
     let text: String
     var body: some View {
         Text(text)
-            .font(.caption2.weight(.medium))
+            .font(.caption2.weight(.semibold))
             .foregroundStyle(.secondary)
-            .padding(.horizontal, 6)
-            .padding(.vertical, 2)
+            .lineLimit(1)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 3)
             .background(Color.secondary.opacity(0.12), in: Capsule())
     }
 }
