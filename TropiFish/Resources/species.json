@@ -2,14 +2,25 @@
   {
     "id": "neon-tetra",
     "commonName": "Neon Tetra",
-    "alsoKnownAs": ["Neon"],
+    "alsoKnownAs": [
+      "Neon"
+    ],
     "scientificName": "Paracheirodon innesi",
+    "imageAsset": "neon-tetra",
+    "imageCredit": {
+      "author": "André Karwath aka Aka",
+      "license": "CC BY-SA 2.5",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Paracheirodon_innesi_(aka).jpg"
+    },
     "careLevel": "beginner",
     "adultSizeCm": 3.0,
     "minTankSizeL": 60,
-    "tempMinC": 20, "tempMaxC": 26,
-    "phMin": 5.5, "phMax": 7.5,
-    "ghMin": 1, "ghMax": 10,
+    "tempMinC": 20,
+    "tempMaxC": 26,
+    "phMin": 5.5,
+    "phMax": 7.5,
+    "ghMin": 1,
+    "ghMax": 10,
     "temperament": "peaceful",
     "minGroupSize": 6,
     "swimZone": "middle",
@@ -24,14 +35,19 @@
   {
     "id": "cardinal-tetra",
     "commonName": "Cardinal Tetra",
-    "alsoKnownAs": ["Cardinal"],
+    "alsoKnownAs": [
+      "Cardinal"
+    ],
     "scientificName": "Paracheirodon axelrodi",
     "careLevel": "intermediate",
     "adultSizeCm": 3.0,
     "minTankSizeL": 70,
-    "tempMinC": 23, "tempMaxC": 27,
-    "phMin": 4.5, "phMax": 6.8,
-    "ghMin": 1, "ghMax": 8,
+    "tempMinC": 23,
+    "tempMaxC": 27,
+    "phMin": 4.5,
+    "phMax": 6.8,
+    "ghMin": 1,
+    "ghMax": 8,
     "temperament": "peaceful",
     "minGroupSize": 6,
     "swimZone": "middle",
@@ -50,9 +66,12 @@
     "careLevel": "beginner",
     "adultSizeCm": 2.0,
     "minTankSizeL": 40,
-    "tempMinC": 23, "tempMaxC": 28,
-    "phMin": 5.5, "phMax": 7.0,
-    "ghMin": 1, "ghMax": 10,
+    "tempMinC": 23,
+    "tempMaxC": 28,
+    "phMin": 5.5,
+    "phMax": 7.0,
+    "ghMin": 1,
+    "ghMax": 10,
     "temperament": "peaceful",
     "minGroupSize": 8,
     "swimZone": "middle",
@@ -71,9 +90,12 @@
     "careLevel": "intermediate",
     "adultSizeCm": 5.0,
     "minTankSizeL": 75,
-    "tempMinC": 24, "tempMaxC": 27,
-    "phMin": 5.5, "phMax": 7.0,
-    "ghMin": 2, "ghMax": 8,
+    "tempMinC": 24,
+    "tempMaxC": 27,
+    "phMin": 5.5,
+    "phMax": 7.0,
+    "ghMin": 2,
+    "ghMax": 8,
     "temperament": "peaceful",
     "minGroupSize": 6,
     "swimZone": "middle",
@@ -92,9 +114,12 @@
     "careLevel": "beginner",
     "adultSizeCm": 4.5,
     "minTankSizeL": 60,
-    "tempMinC": 22, "tempMaxC": 27,
-    "phMin": 6.0, "phMax": 7.5,
-    "ghMin": 2, "ghMax": 12,
+    "tempMinC": 22,
+    "tempMaxC": 27,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 12,
     "temperament": "peaceful",
     "minGroupSize": 6,
     "swimZone": "middle",
@@ -109,14 +134,19 @@
   {
     "id": "zebra-danio",
     "commonName": "Zebra Danio",
-    "alsoKnownAs": ["Zebrafish"],
+    "alsoKnownAs": [
+      "Zebrafish"
+    ],
     "scientificName": "Danio rerio",
     "careLevel": "beginner",
     "adultSizeCm": 5.0,
     "minTankSizeL": 60,
-    "tempMinC": 18, "tempMaxC": 24,
-    "phMin": 6.5, "phMax": 7.5,
-    "ghMin": 5, "ghMax": 15,
+    "tempMinC": 18,
+    "tempMaxC": 24,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 15,
     "temperament": "peaceful",
     "minGroupSize": 6,
     "swimZone": "top",
@@ -131,14 +161,20 @@
   {
     "id": "guppy",
     "commonName": "Guppy",
-    "alsoKnownAs": ["Fancy Guppy", "Millionfish"],
+    "alsoKnownAs": [
+      "Fancy Guppy",
+      "Millionfish"
+    ],
     "scientificName": "Poecilia reticulata",
     "careLevel": "beginner",
     "adultSizeCm": 5.0,
     "minTankSizeL": 40,
-    "tempMinC": 22, "tempMaxC": 28,
-    "phMin": 6.8, "phMax": 7.8,
-    "ghMin": 8, "ghMax": 20,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.8,
+    "phMax": 7.8,
+    "ghMin": 8,
+    "ghMax": 20,
     "temperament": "peaceful",
     "minGroupSize": 3,
     "swimZone": "top",
@@ -157,9 +193,12 @@
     "careLevel": "beginner",
     "adultSizeCm": 5.0,
     "minTankSizeL": 55,
-    "tempMinC": 20, "tempMaxC": 26,
-    "phMin": 7.0, "phMax": 8.2,
-    "ghMin": 10, "ghMax": 25,
+    "tempMinC": 20,
+    "tempMaxC": 26,
+    "phMin": 7.0,
+    "phMax": 8.2,
+    "ghMin": 10,
+    "ghMax": 25,
     "temperament": "peaceful",
     "minGroupSize": 3,
     "swimZone": "all",
@@ -174,14 +213,20 @@
   {
     "id": "molly",
     "commonName": "Molly",
-    "alsoKnownAs": ["Black Molly", "Sailfin Molly"],
+    "alsoKnownAs": [
+      "Black Molly",
+      "Sailfin Molly"
+    ],
     "scientificName": "Poecilia sphenops",
     "careLevel": "beginner",
     "adultSizeCm": 10.0,
     "minTankSizeL": 75,
-    "tempMinC": 24, "tempMaxC": 28,
-    "phMin": 7.5, "phMax": 8.5,
-    "ghMin": 15, "ghMax": 30,
+    "tempMinC": 24,
+    "tempMaxC": 28,
+    "phMin": 7.5,
+    "phMax": 8.5,
+    "ghMin": 15,
+    "ghMax": 30,
     "temperament": "peaceful",
     "minGroupSize": 3,
     "swimZone": "all",
@@ -196,14 +241,19 @@
   {
     "id": "betta",
     "commonName": "Betta",
-    "alsoKnownAs": ["Siamese Fighting Fish"],
+    "alsoKnownAs": [
+      "Siamese Fighting Fish"
+    ],
     "scientificName": "Betta splendens",
     "careLevel": "beginner",
     "adultSizeCm": 6.0,
     "minTankSizeL": 20,
-    "tempMinC": 24, "tempMaxC": 30,
-    "phMin": 6.0, "phMax": 7.5,
-    "ghMin": 5, "ghMax": 20,
+    "tempMinC": 24,
+    "tempMaxC": 30,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 20,
     "temperament": "semiAggressive",
     "minGroupSize": 0,
     "swimZone": "top",
@@ -219,14 +269,20 @@
   {
     "id": "bronze-cory",
     "commonName": "Bronze Corydoras",
-    "alsoKnownAs": ["Bronze Cory", "Corydoras aeneus"],
+    "alsoKnownAs": [
+      "Bronze Cory",
+      "Corydoras aeneus"
+    ],
     "scientificName": "Corydoras aeneus",
     "careLevel": "beginner",
     "adultSizeCm": 6.0,
     "minTankSizeL": 60,
-    "tempMinC": 22, "tempMaxC": 26,
-    "phMin": 6.0, "phMax": 7.8,
-    "ghMin": 2, "ghMax": 15,
+    "tempMinC": 22,
+    "tempMaxC": 26,
+    "phMin": 6.0,
+    "phMax": 7.8,
+    "ghMin": 2,
+    "ghMax": 15,
     "temperament": "peaceful",
     "minGroupSize": 6,
     "swimZone": "bottom",
@@ -241,14 +297,20 @@
   {
     "id": "bristlenose-pleco",
     "commonName": "Bristlenose Pleco",
-    "alsoKnownAs": ["Bristlenose Catfish", "Bushynose"],
+    "alsoKnownAs": [
+      "Bristlenose Catfish",
+      "Bushynose"
+    ],
     "scientificName": "Ancistrus cirrhosus",
     "careLevel": "beginner",
     "adultSizeCm": 12.0,
     "minTankSizeL": 90,
-    "tempMinC": 20, "tempMaxC": 27,
-    "phMin": 6.0, "phMax": 7.5,
-    "ghMin": 2, "ghMax": 20,
+    "tempMinC": 20,
+    "tempMaxC": 27,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 20,
     "temperament": "peaceful",
     "minGroupSize": 0,
     "swimZone": "bottom",
@@ -263,14 +325,20 @@
   {
     "id": "cherry-shrimp",
     "commonName": "Cherry Shrimp",
-    "alsoKnownAs": ["Red Cherry Shrimp", "Neocaridina"],
+    "alsoKnownAs": [
+      "Red Cherry Shrimp",
+      "Neocaridina"
+    ],
     "scientificName": "Neocaridina davidi",
     "careLevel": "beginner",
     "adultSizeCm": 3.0,
     "minTankSizeL": 20,
-    "tempMinC": 18, "tempMaxC": 28,
-    "phMin": 6.5, "phMax": 8.0,
-    "ghMin": 4, "ghMax": 14,
+    "tempMinC": 18,
+    "tempMaxC": 28,
+    "phMin": 6.5,
+    "phMax": 8.0,
+    "ghMin": 4,
+    "ghMax": 14,
     "temperament": "peaceful",
     "minGroupSize": 10,
     "swimZone": "bottom",
@@ -289,9 +357,12 @@
     "careLevel": "beginner",
     "adultSizeCm": 8.0,
     "minTankSizeL": 70,
-    "tempMinC": 24, "tempMaxC": 28,
-    "phMin": 6.0, "phMax": 7.5,
-    "ghMin": 4, "ghMax": 15,
+    "tempMinC": 24,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 4,
+    "ghMax": 15,
     "temperament": "peaceful",
     "minGroupSize": 0,
     "swimZone": "top",
@@ -311,9 +382,12 @@
     "careLevel": "beginner",
     "adultSizeCm": 5.0,
     "minTankSizeL": 60,
-    "tempMinC": 22, "tempMaxC": 28,
-    "phMin": 6.0, "phMax": 7.5,
-    "ghMin": 4, "ghMax": 15,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 4,
+    "ghMax": 15,
     "temperament": "peaceful",
     "minGroupSize": 0,
     "swimZone": "top",
@@ -333,9 +407,12 @@
     "careLevel": "beginner",
     "adultSizeCm": 12.0,
     "minTankSizeL": 115,
-    "tempMinC": 24, "tempMaxC": 28,
-    "phMin": 6.0, "phMax": 7.5,
-    "ghMin": 5, "ghMax": 15,
+    "tempMinC": 24,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 15,
     "temperament": "peaceful",
     "minGroupSize": 0,
     "swimZone": "top",
@@ -354,9 +431,12 @@
     "careLevel": "intermediate",
     "adultSizeCm": 30.0,
     "minTankSizeL": 200,
-    "tempMinC": 22, "tempMaxC": 28,
-    "phMin": 6.0, "phMax": 8.0,
-    "ghMin": 5, "ghMax": 20,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 5,
+    "ghMax": 20,
     "temperament": "semiAggressive",
     "minGroupSize": 0,
     "swimZone": "all",
@@ -372,14 +452,19 @@
   {
     "id": "angelfish",
     "commonName": "Angelfish",
-    "alsoKnownAs": ["Freshwater Angelfish"],
+    "alsoKnownAs": [
+      "Freshwater Angelfish"
+    ],
     "scientificName": "Pterophyllum scalare",
     "careLevel": "intermediate",
     "adultSizeCm": 15.0,
     "minTankSizeL": 150,
-    "tempMinC": 24, "tempMaxC": 30,
-    "phMin": 6.0, "phMax": 7.5,
-    "ghMin": 3, "ghMax": 15,
+    "tempMinC": 24,
+    "tempMaxC": 30,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 3,
+    "ghMax": 15,
     "temperament": "semiAggressive",
     "minGroupSize": 0,
     "swimZone": "middle",
@@ -394,14 +479,20 @@
   {
     "id": "german-blue-ram",
     "commonName": "German Blue Ram",
-    "alsoKnownAs": ["Ram Cichlid", "Blue Ram"],
+    "alsoKnownAs": [
+      "Ram Cichlid",
+      "Blue Ram"
+    ],
     "scientificName": "Mikrogeophagus ramirezi",
     "careLevel": "advanced",
     "adultSizeCm": 5.0,
     "minTankSizeL": 80,
-    "tempMinC": 26, "tempMaxC": 30,
-    "phMin": 5.0, "phMax": 7.0,
-    "ghMin": 1, "ghMax": 8,
+    "tempMinC": 26,
+    "tempMaxC": 30,
+    "phMin": 5.0,
+    "phMax": 7.0,
+    "ghMin": 1,
+    "ghMax": 8,
     "temperament": "peaceful",
     "minGroupSize": 0,
     "swimZone": "bottom",
@@ -416,14 +507,20 @@
   {
     "id": "kribensis",
     "commonName": "Kribensis",
-    "alsoKnownAs": ["Krib", "Rainbow Kribensis"],
+    "alsoKnownAs": [
+      "Krib",
+      "Rainbow Kribensis"
+    ],
     "scientificName": "Pelvicachromis pulcher",
     "careLevel": "intermediate",
     "adultSizeCm": 9.0,
     "minTankSizeL": 75,
-    "tempMinC": 24, "tempMaxC": 28,
-    "phMin": 5.5, "phMax": 7.5,
-    "ghMin": 5, "ghMax": 20,
+    "tempMinC": 24,
+    "tempMaxC": 28,
+    "phMin": 5.5,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 20,
     "temperament": "semiAggressive",
     "minGroupSize": 0,
     "swimZone": "bottom",
@@ -442,9 +539,12 @@
     "careLevel": "beginner",
     "adultSizeCm": 7.0,
     "minTankSizeL": 75,
-    "tempMinC": 22, "tempMaxC": 26,
-    "phMin": 6.0, "phMax": 7.5,
-    "ghMin": 5, "ghMax": 19,
+    "tempMinC": 22,
+    "tempMaxC": 26,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 19,
     "temperament": "semiAggressive",
     "minGroupSize": 6,
     "swimZone": "middle",
@@ -460,14 +560,19 @@
   {
     "id": "oscar",
     "commonName": "Oscar",
-    "alsoKnownAs": ["Tiger Oscar"],
+    "alsoKnownAs": [
+      "Tiger Oscar"
+    ],
     "scientificName": "Astronotus ocellatus",
     "careLevel": "intermediate",
     "adultSizeCm": 30.0,
     "minTankSizeL": 280,
-    "tempMinC": 23, "tempMaxC": 27,
-    "phMin": 6.0, "phMax": 7.5,
-    "ghMin": 5, "ghMax": 20,
+    "tempMinC": 23,
+    "tempMaxC": 27,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 20,
     "temperament": "predatory",
     "minGroupSize": 0,
     "swimZone": "all",
@@ -486,9 +591,12 @@
     "careLevel": "advanced",
     "adultSizeCm": 18.0,
     "minTankSizeL": 250,
-    "tempMinC": 28, "tempMaxC": 31,
-    "phMin": 5.0, "phMax": 7.0,
-    "ghMin": 1, "ghMax": 8,
+    "tempMinC": 28,
+    "tempMaxC": 31,
+    "phMin": 5.0,
+    "phMax": 7.0,
+    "ghMin": 1,
+    "ghMax": 8,
     "temperament": "peaceful",
     "minGroupSize": 6,
     "swimZone": "middle",
@@ -500,5 +608,1688 @@
       "Its high temperature rules out many common community fish."
     ],
     "subspeciesNote": "Tank-bred discus tolerate a wider pH/hardness range than wild-caught fish, which need soft, acidic blackwater conditions."
+  },
+  {
+    "id": "black-neon-tetra",
+    "commonName": "Black Neon Tetra",
+    "scientificName": "Hyphessobrycon herbertaxelrodi",
+    "careLevel": "beginner",
+    "adultSizeCm": 3.5,
+    "minTankSizeL": 75,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 5.5,
+    "phMax": 7.5,
+    "ghMin": 1,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 4,
+    "notes": [
+      "Keep in a shoal of at least 6 (8-10 looks best) to show natural schooling and reduce skittishness.",
+      "Provide soft, slightly acidic water and stable parameters, as they dislike sudden pH or temperature swings.",
+      "Offer a varied diet of quality flakes plus small live or frozen foods like bloodworm and daphnia.",
+      "A dark substrate, planted margins and some open swimming space bring out their coloration."
+    ],
+    "imageAsset": "black-neon-tetra",
+    "imageCredit": {
+      "author": "Juan R. Lascorz",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:05.Hyphessobrycon_herbertaxelrodi.JPG"
+    }
+  },
+  {
+    "id": "glowlight-tetra",
+    "commonName": "Glowlight Tetra",
+    "scientificName": "Hemigrammus erythrozonus",
+    "careLevel": "beginner",
+    "adultSizeCm": 4,
+    "minTankSizeL": 60,
+    "tempMinC": 24,
+    "tempMaxC": 28,
+    "phMin": 5.5,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 4,
+    "notes": [
+      "A hardy, long-established community fish; keep a shoal of 6 or more (10+ ideal) for confident behavior.",
+      "Soft, slightly acidic water with tannins from driftwood or leaf litter enhances the glowing red stripe.",
+      "Plant the tank densely but leave open lanes, as they appreciate both cover and free swimming space.",
+      "Feed small live, frozen and dried foods; they readily accept micro-flakes and small granules."
+    ],
+    "imageAsset": "glowlight-tetra",
+    "imageCredit": {
+      "author": "Tetra_Glowlight.jpg: gonzalovalenzuela\nderivative work: Kyknos (talk)",
+      "license": "CC BY 2.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Tetra_Glowlight_cropped.jpg"
+    }
+  },
+  {
+    "id": "black-skirt-tetra",
+    "commonName": "Black Skirt Tetra",
+    "alsoKnownAs": [
+      "Black Widow Tetra",
+      "Petticoat Tetra",
+      "Blackamoor"
+    ],
+    "scientificName": "Gymnocorymbus ternetzi",
+    "careLevel": "beginner",
+    "adultSizeCm": 6,
+    "minTankSizeL": 75,
+    "tempMinC": 20,
+    "tempMaxC": 26,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "finNipper": true,
+    "litersPerAdditionalIndividual": 8,
+    "notes": [
+      "Keep in a group of at least 6, ideally 10-12, as larger shoals contain squabbling and curb fin-nipping.",
+      "Avoid housing with slow-moving or long-finned tankmates (e.g. bettas, guppies, angelfish) that make easy nipping targets.",
+      "A durable, adaptable species tolerant of a wide range of water conditions, making it ideal for beginners.",
+      "Provide open swimming space plus some planted cover for this active mid-water swimmer."
+    ],
+    "subspeciesNote": "Sold in several forms including longfin, artificially dyed 'colored skirt' fish, and GloFish variants; the standard parameters here apply to all, though dyed specimens are often less hardy.",
+    "imageAsset": "black-skirt-tetra",
+    "imageCredit": {
+      "author": "Juan R. Lascorz",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:01.Gymnocorymbus_ternetzi.JPG"
+    }
+  },
+  {
+    "id": "serpae-tetra",
+    "commonName": "Serpae Tetra",
+    "alsoKnownAs": [
+      "Blood Tetra",
+      "Red Minor Tetra",
+      "Callistus Tetra"
+    ],
+    "scientificName": "Hyphessobrycon eques",
+    "careLevel": "beginner",
+    "adultSizeCm": 4,
+    "minTankSizeL": 75,
+    "tempMinC": 20,
+    "tempMaxC": 28,
+    "phMin": 5.0,
+    "phMax": 7.5,
+    "ghMin": 1,
+    "ghMax": 15,
+    "temperament": "semiAggressive",
+    "minGroupSize": 8,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "finNipper": true,
+    "litersPerAdditionalIndividual": 4,
+    "notes": [
+      "Keep in a group of 8 or more (12+ is better) to diffuse aggression and curb persistent fin-nipping.",
+      "Avoid housing with slow-moving or long-finned tankmates such as angelfish, guppies or bettas.",
+      "Offer a varied diet of quality flake plus live or frozen bloodworm, Daphnia and brine shrimp.",
+      "Provide planted margins with open central swimming space and gentle water flow."
+    ],
+    "subspeciesNote": "Selectively bred long-finned, albino and balloon-bodied forms exist; these share identical care needs to wild fish.",
+    "imageAsset": "serpae-tetra",
+    "imageCredit": {
+      "author": "No machine-readable author provided. Faucon~commonswiki assumed (based on copyright claims).",
+      "license": "CC BY-SA 2.5",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Serpae_tetra.JPG"
+    }
+  },
+  {
+    "id": "lemon-tetra",
+    "commonName": "Lemon Tetra",
+    "scientificName": "Hyphessobrycon pulchripinnis",
+    "careLevel": "beginner",
+    "adultSizeCm": 4,
+    "minTankSizeL": 75,
+    "tempMinC": 20,
+    "tempMaxC": 28,
+    "phMin": 5.0,
+    "phMax": 7.5,
+    "ghMin": 1,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 8,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 4,
+    "notes": [
+      "Keep in a shoal of 8 or more to see the best colour and natural hierarchy behaviour.",
+      "A dark substrate, planting and subdued lighting intensify the yellow body and red-edged fins.",
+      "Feed a varied omnivore diet; carotenoid-rich and live/frozen foods maintain vivid colouration.",
+      "A peaceful community fish that suits soft, slightly acidic, well-filtered water."
+    ],
+    "imageAsset": "lemon-tetra",
+    "imageCredit": {
+      "author": "Waugsberg",
+      "license": "CC BY 2.5",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Hyphessobrycon_pulchripinnis.jpg"
+    }
+  },
+  {
+    "id": "congo-tetra",
+    "commonName": "Congo Tetra",
+    "scientificName": "Phenacogrammus interruptus",
+    "careLevel": "intermediate",
+    "adultSizeCm": 8,
+    "minTankSizeL": 110,
+    "tempMinC": 23,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 3,
+    "ghMax": 18,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 15,
+    "notes": [
+      "Keep as a mixed-sex shoal of 6 or more so males display their flowing fins and iridescence.",
+      "Sensitive to water quality, so maintain a mature tank with stable parameters and regular water changes.",
+      "Do not house with fin-nipping species, which will shred the males' long fin extensions.",
+      "Provide generous open swimming length as these are active, fast-moving fish."
+    ],
+    "imageAsset": "congo-tetra",
+    "imageCredit": {
+      "author": "André Karwath aka Aka",
+      "license": "CC BY-SA 2.5",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Phenacogrammus_interruptus_(aka).jpg"
+    }
+  },
+  {
+    "id": "penguin-tetra",
+    "commonName": "Penguin Tetra",
+    "alsoKnownAs": [
+      "Hockeystick Tetra",
+      "Blackline Penguinfish"
+    ],
+    "scientificName": "Thayeria boehlkei",
+    "careLevel": "beginner",
+    "adultSizeCm": 7,
+    "minTankSizeL": 75,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.8,
+    "ghMin": 3,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 5,
+    "notes": [
+      "Keep in a shoal of at least 6 (ideally 10+); occasional fin-nipping largely disappears in larger groups.",
+      "Provide open mid-water swimming space with some planting; they are active, fast swimmers.",
+      "Feed a varied omnivorous diet of small dried foods plus live/frozen bloodworm, Daphnia and Artemia.",
+      "Best kept slightly acidic to neutral with good water quality; use a tight-fitting lid as they can jump."
+    ],
+    "imageAsset": "penguin-tetra",
+    "imageCredit": {
+      "author": "Juan R. Lascorz",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:03.Thayeria_boehlkei.JPG"
+    }
+  },
+  {
+    "id": "pristella-tetra",
+    "commonName": "Pristella Tetra",
+    "alsoKnownAs": [
+      "X-ray Tetra",
+      "Water Goldfinch"
+    ],
+    "scientificName": "Pristella maxillaris",
+    "careLevel": "beginner",
+    "adultSizeCm": 4.5,
+    "minTankSizeL": 60,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 5,
+    "notes": [
+      "Keep in a shoal of at least 6 (ideally 10+) to reduce stress and encourage natural behaviour.",
+      "One of the more tolerant tetras, thriving in slightly acidic to neutral, soft-to-moderately-hard water.",
+      "Offer a varied diet of quality dried foods plus small live or frozen foods such as Daphnia and Artemia.",
+      "A gentle community fish best kept with similarly peaceful tankmates and some planted cover."
+    ],
+    "subspeciesNote": "A selectively-bred 'golden' (semi-albino) strain is available and cared for identically to the wild form.",
+    "imageAsset": "pristella-tetra",
+    "imageCredit": {
+      "author": "Richard Bartz, Munich Makro Freak",
+      "license": "CC BY-SA 2.5",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Pristella_maxillaris.jpg"
+    }
+  },
+  {
+    "id": "bloodfin-tetra",
+    "commonName": "Bloodfin Tetra",
+    "alsoKnownAs": [
+      "Redflank Bloodfin"
+    ],
+    "scientificName": "Aphyocharax anisitsi",
+    "careLevel": "beginner",
+    "adultSizeCm": 5.5,
+    "minTankSizeL": 60,
+    "tempMinC": 18,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 5,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "top",
+    "diet": "omnivore",
+    "finNipper": true,
+    "litersPerAdditionalIndividual": 6,
+    "notes": [
+      "Keep in a shoal of at least six or more to reduce skittishness and curb fin-nipping behaviour.",
+      "Fit a tight-fitting lid, as these active swimmers are prone to jumping.",
+      "Very hardy and cold-tolerant, tolerating subtropical unheated tanks, but colour improves in warmer planted setups.",
+      "Feed a varied omnivorous diet of quality dried flakes plus regular frozen or live foods."
+    ],
+    "imageAsset": "bloodfin-tetra",
+    "imageCredit": {
+      "author": "Hemigrammus at German Wikipedia",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Aphyocharax_anisitsi.jpg"
+    }
+  },
+  {
+    "id": "chili-rasbora",
+    "commonName": "Chili Rasbora",
+    "alsoKnownAs": [
+      "Mosquito Rasbora"
+    ],
+    "scientificName": "Boraras brigittae",
+    "careLevel": "intermediate",
+    "adultSizeCm": 2,
+    "minTankSizeL": 40,
+    "tempMinC": 20,
+    "tempMaxC": 28,
+    "phMin": 4.0,
+    "phMax": 7.0,
+    "ghMin": 1,
+    "ghMax": 10,
+    "temperament": "peaceful",
+    "minGroupSize": 8,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 1,
+    "notes": [
+      "Only add to a mature, stable, densely planted tank as this tiny species reacts badly to unstable water chemistry.",
+      "Keep in a group of at least 8-10 to reduce timidity and bring out the deep red breeding colour.",
+      "Provide soft, acidic blackwater conditions with dim lighting, driftwood and leaf litter for best results.",
+      "Feed small live and frozen foods such as Daphnia and baby Artemia alongside finely crushed dried foods."
+    ],
+    "imageAsset": "chili-rasbora",
+    "imageCredit": {
+      "author": "Daiju Azuma",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Boraras_brigittae_by_DaijuAzuma.JPG"
+    }
+  },
+  {
+    "id": "lambchop-rasbora",
+    "commonName": "Lambchop Rasbora",
+    "alsoKnownAs": [
+      "Espei Rasbora",
+      "False Harlequin Rasbora"
+    ],
+    "scientificName": "Trigonostigma espei",
+    "careLevel": "beginner",
+    "adultSizeCm": 3,
+    "minTankSizeL": 54,
+    "tempMinC": 23,
+    "tempMaxC": 28,
+    "phMin": 5.5,
+    "phMax": 7.5,
+    "ghMin": 1,
+    "ghMax": 10,
+    "temperament": "peaceful",
+    "minGroupSize": 8,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 2,
+    "notes": [
+      "A hardy, peaceful shoaler that is an excellent choice for planted community tanks.",
+      "Keep 8-10 or more together; larger groups shoal tightly and show stronger colour.",
+      "Colour deepens over a dark substrate in a well-planted, dimly lit setup.",
+      "Offer small live and frozen foods like bloodworm and Daphnia alongside quality flakes and micro-granules."
+    ],
+    "imageAsset": "lambchop-rasbora",
+    "imageCredit": {
+      "author": "Lerdsuwa",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Trigonostigma_espei.jpg"
+    }
+  },
+  {
+    "id": "scissortail-rasbora",
+    "commonName": "Scissortail Rasbora",
+    "alsoKnownAs": [
+      "Three-lined Rasbora"
+    ],
+    "scientificName": "Rasbora trilineata",
+    "careLevel": "beginner",
+    "adultSizeCm": 12,
+    "minTankSizeL": 200,
+    "tempMinC": 22,
+    "tempMaxC": 25,
+    "phMin": 6.0,
+    "phMax": 7.8,
+    "ghMin": 2,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 8,
+    "notes": [
+      "An energetic, larger shoaling species needing a long tank with plenty of open horizontal swimming space.",
+      "A strong jumper, so always use a tight-fitting cover on the aquarium.",
+      "Sensitive to accumulated organic waste; maintain clean water with regular partial changes.",
+      "Feed a varied diet of quality dried foods plus regular live and frozen items like Daphnia and Artemia."
+    ],
+    "imageAsset": "scissortail-rasbora",
+    "imageCredit": {
+      "author": "Lerdsuwa",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Rasbora_trilineata.jpg"
+    }
+  },
+  {
+    "id": "cherry-barb",
+    "commonName": "Cherry Barb",
+    "scientificName": "Puntius titteya",
+    "careLevel": "beginner",
+    "adultSizeCm": 5,
+    "minTankSizeL": 54,
+    "tempMinC": 20,
+    "tempMaxC": 27,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 2,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 4,
+    "notes": [
+      "Keep in a group of at least six, with more females than males to spread out male sparring.",
+      "Offer a varied diet of quality flakes plus small live or frozen foods like daphnia and bloodworm.",
+      "A densely planted tank with subdued lighting brings out the males' deep red colour and reduces shyness.",
+      "Tolerates a wide temperature range but avoid keeping it long-term at the warm end above 27C."
+    ],
+    "imageAsset": "cherry-barb",
+    "imageCredit": {
+      "author": "Brian Gratwicke",
+      "license": "CC BY 2.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Cherry_barb,_Puntius_titteya.jpg"
+    }
+  },
+  {
+    "id": "gold-barb",
+    "commonName": "Gold Barb",
+    "alsoKnownAs": [
+      "Chinese Barb",
+      "Schuberti Barb"
+    ],
+    "scientificName": "Barbodes semifasciolatus",
+    "careLevel": "beginner",
+    "adultSizeCm": 7,
+    "minTankSizeL": 81,
+    "tempMinC": 16,
+    "tempMaxC": 24,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 2,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 8,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 8,
+    "notes": [
+      "Keep a group of eight or more so the fish feel secure and display natural shoaling near the substrate.",
+      "This is a coolwater/subtropical species that does best below 24C and does not require a heated tropical tank.",
+      "The bright gold aquarium strain is a captive colour form; wild fish are greenish with dark bars.",
+      "An omnivore that should get vegetable matter or algae-based foods alongside live and frozen treats."
+    ],
+    "subspeciesNote": "The common 'gold' and 'schuberti' fish are selectively bred colour forms of the wild Barbodes semifasciolatus, not separate species.",
+    "imageAsset": "gold-barb",
+    "imageCredit": {
+      "author": "Fred Hsu (Wikipedia:User:Fredhsu on en.wikipedia)",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Gold_Barb_Puntius_semifasciolatus_7.png"
+    }
+  },
+  {
+    "id": "rosy-barb",
+    "commonName": "Rosy Barb",
+    "alsoKnownAs": [
+      "Red Barb"
+    ],
+    "scientificName": "Pethia conchonius",
+    "careLevel": "beginner",
+    "adultSizeCm": 7,
+    "minTankSizeL": 90,
+    "tempMinC": 16,
+    "tempMaxC": 24,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 5,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 8,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "finNipper": true,
+    "litersPerAdditionalIndividual": 10,
+    "notes": [
+      "An active, fast-swimming fish that needs a long tank and a group of at least eight to curb fin-nipping.",
+      "Avoid housing with slow-moving or long-finned tankmates such as bettas and fancy guppies.",
+      "A subtropical species that prefers cooler water and can be kept in an unheated room-temperature tank.",
+      "Feeding some vegetable or algae-based food helps satisfy its omnivorous, plant-grazing appetite."
+    ],
+    "imageAsset": "rosy-barb",
+    "imageCredit": {
+      "author": "Marrabbio2",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Puntius_conchonius.jpg"
+    }
+  },
+  {
+    "id": "odessa-barb",
+    "commonName": "Odessa Barb",
+    "scientificName": "Pethia padamya",
+    "careLevel": "beginner",
+    "adultSizeCm": 5,
+    "minTankSizeL": 75,
+    "tempMinC": 16,
+    "tempMaxC": 25,
+    "phMin": 6.5,
+    "phMax": 8.5,
+    "ghMin": 5,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "finNipper": true,
+    "litersPerAdditionalIndividual": 8,
+    "notes": [
+      "Keep in a mixed-sex group of at least 6 (8-10 is better) so males colour up and aggression stays spread within the shoal.",
+      "Rival males show the brightest red flank stripe when several are present, so understocking dulls their colour.",
+      "Offer a varied omnivore diet of quality flake plus live or frozen Daphnia, bloodworm and Artemia for best condition.",
+      "Provide open mid-water swimming space with planted edges; they tolerate a wide temperature and pH range."
+    ],
+    "imageAsset": "odessa-barb",
+    "imageCredit": {
+      "author": "Cedricguppy - Loury Cédric",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Pethia_padamya_-_male_-_AquaPorteDoree_01.JPG"
+    }
+  },
+  {
+    "id": "denison-barb",
+    "commonName": "Denison Barb",
+    "alsoKnownAs": [
+      "Roseline Shark",
+      "Red-line Torpedo Barb",
+      "Miss Kerala"
+    ],
+    "scientificName": "Sahyadria denisonii",
+    "careLevel": "intermediate",
+    "adultSizeCm": 11,
+    "minTankSizeL": 200,
+    "tempMinC": 15,
+    "tempMaxC": 25,
+    "phMin": 6.5,
+    "phMax": 7.8,
+    "ghMin": 5,
+    "ghMax": 25,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 40,
+    "notes": [
+      "An active, powerful swimmer that needs a long tank (base at least 120 x 45 cm) with strong, well-oxygenated flow.",
+      "Keep as a group of 6 or more; lone or paired fish become skittish and stressed.",
+      "Demands pristine, low-waste water, so run efficient filtration and do weekly 30-50% water changes.",
+      "Feed a varied omnivore diet of sinking dried foods, frozen bloodworm and Daphnia, plus some algae or vegetable matter."
+    ],
+    "imageAsset": "denison-barb",
+    "imageCredit": {
+      "author": "Vengolis",
+      "license": "CC BY 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Sahyadria_denisonii.jpg"
+    }
+  },
+  {
+    "id": "celestial-pearl-danio",
+    "commonName": "Celestial Pearl Danio",
+    "alsoKnownAs": [
+      "Galaxy Rasbora",
+      "Fireworks Rasbora"
+    ],
+    "scientificName": "Danio margaritatus",
+    "careLevel": "intermediate",
+    "adultSizeCm": 2.5,
+    "minTankSizeL": 40,
+    "tempMinC": 20,
+    "tempMaxC": 26,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 4,
+    "notes": [
+      "A timid nano fish best kept in a heavily planted tank with dark substrate and calm tankmates to reduce skittishness.",
+      "Keep a group of at least 6 (ideally 15-20+); larger groups spread out male sparring and produce bolder, better-coloured fish.",
+      "As a micropredator it prefers small live and frozen foods such as Daphnia and Artemia, supplemented with fine dried foods.",
+      "Males spar and can nip fins within the group, so avoid mixing with long-finned or boisterous species."
+    ],
+    "subspeciesNote": "Originally described as Celestichthys margaritatus; that genus is now a synonym of Danio, so both names refer to the same species.",
+    "imageAsset": "celestial-pearl-danio",
+    "imageCredit": {
+      "author": "Mummymonkey at English Wikipedia",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Celestichthys_margaritatus.jpg"
+    }
+  },
+  {
+    "id": "pearl-danio",
+    "commonName": "Pearl Danio",
+    "scientificName": "Danio albolineatus",
+    "careLevel": "beginner",
+    "adultSizeCm": 6,
+    "minTankSizeL": 75,
+    "tempMinC": 16,
+    "tempMaxC": 25,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 1,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 8,
+    "swimZone": "top",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 8,
+    "notes": [
+      "Keep in a shoal of at least 8-10 as isolated fish become stressed and skittish.",
+      "Provide a long tank (roughly 90 cm footprint) with plenty of open swimming space for these highly active swimmers.",
+      "They are accomplished jumpers, so use a tight-fitting, secure lid at all times.",
+      "Offer a varied omnivorous diet of quality flakes plus small live or frozen foods to bring out the best colour."
+    ],
+    "imageAsset": "pearl-danio",
+    "imageCredit": {
+      "author": "Sc99cs at English Wikipedia\n\n(Original text: Steven Coburn sc99cs)",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Danio_albolineatus.jpg"
+    }
+  },
+  {
+    "id": "giant-danio",
+    "commonName": "Giant Danio",
+    "scientificName": "Devario aequipinnatus",
+    "careLevel": "beginner",
+    "adultSizeCm": 12,
+    "minTankSizeL": 140,
+    "tempMinC": 22,
+    "tempMaxC": 27,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 5,
+    "ghMax": 19,
+    "temperament": "semiAggressive",
+    "minGroupSize": 6,
+    "swimZone": "top",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 20,
+    "notes": [
+      "A large, boisterous, fast-moving fish best kept in a group of 6 or more (ideally 8-10) in a tank at least 120 cm long.",
+      "Its energetic swimming can intimidate slow or timid tankmates, so pair it only with robust, similarly active species.",
+      "A strong jumper that needs a secure, well-fitting cover on the aquarium.",
+      "Hardy and undemanding, it accepts most quality flake, pellet, live and frozen foods."
+    ],
+    "subspeciesNote": "Fish sold as Devario aequipinnatus are frequently the similar Devario malabaricus; the two are easily confused and care needs are identical.",
+    "imageAsset": "giant-danio",
+    "imageCredit": {
+      "author": "Faucon",
+      "license": "CC BY-SA 2.5",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Devario_aequipinnatus.JPG"
+    }
+  },
+  {
+    "id": "white-cloud-mountain-minnow",
+    "commonName": "White Cloud Mountain Minnow",
+    "alsoKnownAs": [
+      "White Cloud",
+      "Canton Danio"
+    ],
+    "scientificName": "Tanichthys albonubes",
+    "careLevel": "beginner",
+    "adultSizeCm": 4,
+    "minTankSizeL": 40,
+    "tempMinC": 14,
+    "tempMaxC": 22,
+    "phMin": 6.0,
+    "phMax": 8.5,
+    "ghMin": 5,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 4,
+    "notes": [
+      "A coldwater/subtropical species that thrives at cooler room temperatures and does not need (or want) a heater in most homes.",
+      "Keep in a shoal of at least 6-10; larger groups encourage natural behaviour and vivid fin displays from males.",
+      "Extremely hardy and forgiving of water quality, making it an ideal first fish and an excellent unheated nano-tank resident.",
+      "An opportunistic omnivore that readily takes flakes, micro-pellets and small live or frozen foods."
+    ],
+    "imageAsset": "white-cloud-mountain-minnow",
+    "imageCredit": {
+      "author": "Corydoras-adolfoi",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:White_Cloud_Mountain_Minnow_(Tanichthys_albonubes)_female_in_front.jpg"
+    }
+  },
+  {
+    "id": "swordtail",
+    "commonName": "Swordtail",
+    "alsoKnownAs": [
+      "Green Swordtail",
+      "Red Swordtail"
+    ],
+    "scientificName": "Xiphophorus hellerii",
+    "careLevel": "beginner",
+    "adultSizeCm": 14,
+    "minTankSizeL": 75,
+    "tempMinC": 18,
+    "tempMaxC": 28,
+    "phMin": 7.0,
+    "phMax": 8.0,
+    "ghMin": 10,
+    "ghMax": 25,
+    "temperament": "semiAggressive",
+    "minGroupSize": 3,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 15,
+    "notes": [
+      "Keep one male to two or three females, as males relentlessly chase and harass females.",
+      "Active jumpers, so always use a tightly fitting lid on the aquarium.",
+      "Offer a varied omnivore diet including some vegetable matter or algae-based flake.",
+      "This prolific livebearer breeds readily, so plan for rapid population growth or separate the sexes."
+    ],
+    "imageAsset": "swordtail",
+    "imageCredit": {
+      "author": "Bartosz Kowalewicz",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Xiphophorus_hellerii_-_male_and_female.jpg"
+    }
+  },
+  {
+    "id": "endlers-livebearer",
+    "commonName": "Endler's Livebearer",
+    "alsoKnownAs": [
+      "Endler's Guppy",
+      "Endler"
+    ],
+    "scientificName": "Poecilia wingei",
+    "careLevel": "beginner",
+    "adultSizeCm": 4,
+    "minTankSizeL": 20,
+    "tempMinC": 24,
+    "tempMaxC": 30,
+    "phMin": 7.0,
+    "phMax": 8.5,
+    "ghMin": 10,
+    "ghMax": 30,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 4,
+    "notes": [
+      "A peaceful nano fish ideal for small planted aquariums with gentle filtration.",
+      "Keep more females than males to spread out breeding attention and reduce harassment.",
+      "Feed small foods such as crushed flake, micro-pellets and occasional live or frozen brine shrimp.",
+      "Do not house with common guppies, as the two species interbreed and dilute pure Endler lines."
+    ],
+    "subspeciesNote": "Stock ranges from pure 'N-class' wild-type Endlers to K-class guppy hybrids; only N-class fish are genetically pure Poecilia wingei.",
+    "imageAsset": "endlers-livebearer",
+    "imageCredit": {
+      "author": "TomCatX",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Poecilia_wingei_Cologne_Zoo_1.jpg"
+    }
+  },
+  {
+    "id": "rosy-red-minnow",
+    "commonName": "Rosy Red Minnow",
+    "alsoKnownAs": [
+      "Fathead Minnow"
+    ],
+    "scientificName": "Pimephales promelas",
+    "careLevel": "beginner",
+    "adultSizeCm": 7,
+    "minTankSizeL": 40,
+    "tempMinC": 10,
+    "tempMaxC": 22,
+    "phMin": 7.0,
+    "phMax": 8.0,
+    "ghMin": 5,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 5,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "finNipper": true,
+    "litersPerAdditionalIndividual": 8,
+    "notes": [
+      "A hardy coldwater species best kept unheated at room temperature or in an outdoor pond.",
+      "Extremely tolerant of temperature swings, poor oxygen and variable water quality.",
+      "Can occasionally nip fins, so avoid slow, long-finned tankmates like bettas or fancy goldfish.",
+      "Keep in a group of five or more, and note wild fish can reach about 10 cm total length."
+    ],
+    "imageAsset": "rosy-red-minnow",
+    "imageCredit": {
+      "author": "U.S. Fish and Wildlife Service",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Pimephales_promelas.jpg"
+    }
+  },
+  {
+    "id": "otocinclus",
+    "commonName": "Otocinclus",
+    "alsoKnownAs": [
+      "Dwarf Sucker Catfish",
+      "Oto Catfish"
+    ],
+    "scientificName": "Otocinclus vittatus",
+    "careLevel": "intermediate",
+    "adultSizeCm": 4.5,
+    "minTankSizeL": 40,
+    "tempMinC": 22,
+    "tempMaxC": 27,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "bottom",
+    "diet": "herbivore",
+    "litersPerAdditionalIndividual": 4,
+    "notes": [
+      "Keep in groups of at least six as they are gregarious and much bolder in numbers.",
+      "Only add them to a mature, established tank with plenty of soft green algae and biofilm to graze on.",
+      "Supplement grazing with blanched vegetables and algae wafers, since bare tanks quickly starve them.",
+      "Sensitive to poor water quality and abrupt parameter swings, so acclimatise slowly and keep nitrates low."
+    ],
+    "imageAsset": "otocinclus",
+    "imageCredit": {
+      "author": "No machine-readable author provided. Chle assumed (based on copyright claims).",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Otocinclus_vittatus.jpg"
+    }
+  },
+  {
+    "id": "pygmy-corydoras",
+    "commonName": "Pygmy Corydoras",
+    "alsoKnownAs": [
+      "Pygmy Cory"
+    ],
+    "scientificName": "Corydoras pygmaeus",
+    "careLevel": "intermediate",
+    "adultSizeCm": 3,
+    "minTankSizeL": 40,
+    "tempMinC": 22,
+    "tempMaxC": 26,
+    "phMin": 6.4,
+    "phMax": 7.4,
+    "ghMin": 2,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 3,
+    "notes": [
+      "Keep in a shoal of at least six, ideally ten or more, for tight schooling and confident behaviour.",
+      "Use a soft sand or fine smooth substrate to protect their delicate barbels.",
+      "Too small for most communities, so pair only with tiny peaceful fish that cannot eat or outcompete them.",
+      "Offer finely ground sinking foods plus small live/frozen items like microworm or Artemia nauplii."
+    ],
+    "imageAsset": "pygmy-corydoras",
+    "imageCredit": {
+      "author": "Birger A",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Corydoras_pygmaeus5333.jpg"
+    }
+  },
+  {
+    "id": "panda-corydoras",
+    "commonName": "Panda Corydoras",
+    "alsoKnownAs": [
+      "Panda Cory"
+    ],
+    "scientificName": "Corydoras panda",
+    "careLevel": "intermediate",
+    "adultSizeCm": 5,
+    "minTankSizeL": 45,
+    "tempMinC": 22,
+    "tempMaxC": 25,
+    "phMin": 6.0,
+    "phMax": 7.4,
+    "ghMin": 1,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 5,
+    "notes": [
+      "Maintain in a group of at least six for active, confident behaviour.",
+      "Prefers cooler water and will not tolerate warm temperatures long-term, which shortens its lifespan.",
+      "Use soft sand substrate and keep water pristine, as this species is sensitive to nitrate and poor quality.",
+      "Feed a good-quality sinking pellet supplemented with Daphnia, Artemia and bloodworm."
+    ],
+    "imageAsset": "panda-corydoras",
+    "imageCredit": {
+      "author": "Giniro",
+      "license": "CC BY 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Corydoras_panda.JPG"
+    }
+  },
+  {
+    "id": "sterbas-corydoras",
+    "commonName": "Sterba's Corydoras",
+    "alsoKnownAs": [
+      "Sterbai Cory"
+    ],
+    "scientificName": "Corydoras sterbai",
+    "careLevel": "beginner",
+    "adultSizeCm": 6.5,
+    "minTankSizeL": 75,
+    "tempMinC": 24,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.6,
+    "ghMin": 1,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 10,
+    "notes": [
+      "Use a soft sand or smooth rounded-gravel substrate to protect their delicate barbels from wear and infection.",
+      "One of the few Corydoras that tolerates warmth well, making them a good bottom-dweller for discus and other warm tanks.",
+      "Keep in a group of at least six so they forage and shoal confidently rather than hiding.",
+      "Feed sinking wafers or pellets as a staple and supplement with frozen bloodworm or brine shrimp a few times weekly."
+    ],
+    "imageAsset": "sterbas-corydoras",
+    "imageCredit": {
+      "author": "Tino Strauss",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Corydoras_sterbai_02.jpg"
+    }
+  },
+  {
+    "id": "kuhli-loach",
+    "commonName": "Kuhli Loach",
+    "alsoKnownAs": [
+      "Coolie Loach",
+      "Leopard Loach"
+    ],
+    "scientificName": "Pangio kuhlii",
+    "careLevel": "beginner",
+    "adultSizeCm": 10,
+    "minTankSizeL": 75,
+    "tempMinC": 24,
+    "tempMaxC": 30,
+    "phMin": 5.5,
+    "phMax": 7.0,
+    "ghMin": 1,
+    "ghMax": 8,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 8,
+    "notes": [
+      "Provide fine sand substrate as these eel-like loaches love to burrow and can scratch themselves on sharp gravel.",
+      "Add plenty of cover such as leaf litter, caves and dense planting; they are shy and mostly active at dusk and night.",
+      "Keep a group of six or more, as they are far more visible and relaxed in company.",
+      "Ensure all filter intakes and tank gaps are sealed, as their slender bodies readily escape or get stuck."
+    ],
+    "subspeciesNote": "Most 'kuhli loaches' sold in the trade are actually Pangio semicincta; true P. kuhlii is uncommon, but care requirements are effectively identical.",
+    "imageAsset": "kuhli-loach",
+    "imageCredit": {
+      "author": "User:Louie",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Pangio_kuhlii.jpg"
+    }
+  },
+  {
+    "id": "clown-loach",
+    "commonName": "Clown Loach",
+    "alsoKnownAs": [
+      "Tiger Botia"
+    ],
+    "scientificName": "Chromobotia macracanthus",
+    "careLevel": "advanced",
+    "adultSizeCm": 30,
+    "minTankSizeL": 500,
+    "tempMinC": 24,
+    "tempMaxC": 30,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 1,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 75,
+    "notes": [
+      "A very large, long-lived, slow-growing fish that ultimately needs a big tank with a footprint of at least 180x60cm.",
+      "Highly social; keep in groups of six or more or they become withdrawn and stressed.",
+      "Sensitive to poor water quality and prone to whitespot, so maintain warm, clean water with frequent large water changes.",
+      "Offer a varied omnivorous diet including sinking pellets, vegetables and occasional snails, which they relish."
+    ],
+    "imageAsset": "clown-loach",
+    "imageCredit": {
+      "author": "Vlad Butsky from San Jose, CA, USA",
+      "license": "CC BY 2.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Chromobotia_macracanthus.jpg"
+    }
+  },
+  {
+    "id": "yoyo-loach",
+    "commonName": "Yoyo Loach",
+    "alsoKnownAs": [
+      "Almora Loach",
+      "Pakistani Loach"
+    ],
+    "scientificName": "Botia almorhae",
+    "careLevel": "intermediate",
+    "adultSizeCm": 13,
+    "minTankSizeL": 200,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 12,
+    "temperament": "semiAggressive",
+    "minGroupSize": 5,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 40,
+    "notes": [
+      "Keep in a group of five or more so they establish a social hierarchy and stay confident rather than stressed and aggressive.",
+      "Use a soft sand or smooth substrate to protect their delicate barbels, and provide plenty of caves and driftwood hiding spots.",
+      "They are avid snail-eaters and can be boisterous, so choose robust rather than timid or long-finned tankmates.",
+      "Only add them to a mature, stable, well-oxygenated tank as they are sensitive to poor water quality and ich."
+    ],
+    "imageAsset": "yoyo-loach",
+    "imageCredit": {
+      "author": "Lukáš Mižoch",
+      "license": "CC BY-SA 2.5",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Botia_almorhae.jpg"
+    }
+  },
+  {
+    "id": "zebra-loach",
+    "commonName": "Zebra Loach",
+    "alsoKnownAs": [
+      "Striped Loach",
+      "Lined Loach"
+    ],
+    "scientificName": "Botia striata",
+    "careLevel": "intermediate",
+    "adultSizeCm": 9,
+    "minTankSizeL": 110,
+    "tempMinC": 22,
+    "tempMaxC": 26,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 1,
+    "ghMax": 10,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 20,
+    "notes": [
+      "Maintain a group of at least six (ideally ten or more) or they become withdrawn and may nip similarly shaped fish.",
+      "Provide soft sand substrate plus caves, driftwood and shaded retreats as they dislike bright, bare tanks.",
+      "One of the more peaceful Botia, making them well suited to calm community tanks with cooler-water species.",
+      "They readily eat snails and sinking foods but should not rely on leftovers; offer a varied sinking diet."
+    ],
+    "imageAsset": "zebra-loach",
+    "imageCredit": {
+      "author": "Lerdsuwa",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Botia_striata.jpg"
+    }
+  },
+  {
+    "id": "clown-pleco",
+    "commonName": "Clown Pleco",
+    "alsoKnownAs": [
+      "Clown Panaque",
+      "Ringlet Pleco",
+      "L104"
+    ],
+    "scientificName": "Panaqolus maccus",
+    "careLevel": "beginner",
+    "adultSizeCm": 9,
+    "minTankSizeL": 75,
+    "tempMinC": 23,
+    "tempMaxC": 28,
+    "phMin": 6.8,
+    "phMax": 7.6,
+    "ghMin": 2,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 0,
+    "swimZone": "bottom",
+    "diet": "herbivore",
+    "litersPerAdditionalIndividual": 40,
+    "notes": [
+      "Driftwood is essential, not optional, as this fish rasps and digests wood; without it the pleco slowly starves.",
+      "Supplement the wood with sinking algae wafers and blanched vegetables like courgette to keep them well fed.",
+      "Provide caves or tubes for daytime shelter since they are nocturnal and shy away from bright light.",
+      "Peaceful and stays small, but males are territorial over caves so give each individual its own hiding spot."
+    ],
+    "imageAsset": "clown-pleco",
+    "imageCredit": {
+      "author": "Realfakebezalbob",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Clown_Pleco_in_home_aquaria.jpg"
+    }
+  },
+  {
+    "id": "common-pleco",
+    "commonName": "Common Pleco",
+    "alsoKnownAs": [
+      "Amazon Sailfin Catfish",
+      "Janitor Fish"
+    ],
+    "scientificName": "Pterygoplichthys pardalis",
+    "careLevel": "intermediate",
+    "adultSizeCm": 45,
+    "minTankSizeL": 450,
+    "tempMinC": 23,
+    "tempMaxC": 28,
+    "phMin": 6.5,
+    "phMax": 7.6,
+    "ghMin": 5,
+    "ghMax": 25,
+    "temperament": "peaceful",
+    "minGroupSize": 0,
+    "swimZone": "bottom",
+    "diet": "herbivore",
+    "litersPerAdditionalIndividual": 200,
+    "notes": [
+      "Frequently mislabelled as a small 'algae eater' but reaches 40-46 cm, so only buy for a very large tank.",
+      "Offer a vegetable-based diet of algae wafers plus fresh zucchini, cucumber and spinach, not just leftover flake.",
+      "Provide sturdy driftwood, which the fish rasps for fibre and uses as daytime cover.",
+      "Produces a heavy bioload, so pair with strong filtration and frequent large water changes."
+    ],
+    "subspeciesNote": "Sold generically as 'common pleco'; the same trade name is applied to several Pterygoplichthys species, which are easily confused.",
+    "imageAsset": "common-pleco",
+    "imageCredit": {
+      "author": "Ildar Sagdejev (Specious)",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:2004-02-02_Pterygoplichthys_pardalis_on_blue_gravel.jpg"
+    }
+  },
+  {
+    "id": "glass-catfish",
+    "commonName": "Glass Catfish",
+    "alsoKnownAs": [
+      "Ghost Catfish",
+      "Phantom Catfish"
+    ],
+    "scientificName": "Kryptopterus vitreolus",
+    "careLevel": "intermediate",
+    "adultSizeCm": 6.5,
+    "minTankSizeL": 75,
+    "tempMinC": 20,
+    "tempMaxC": 26,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "carnivore",
+    "litersPerAdditionalIndividual": 10,
+    "notes": [
+      "Keep in a group of at least 6; kept alone or in small numbers they become stressed, stop feeding and waste away.",
+      "Very sensitive to unstable parameters, so add only to a mature, cycled tank and keep nitrate low.",
+      "Prefers dim, gently flowing, planted tanks and feeds mainly on small live and frozen foods such as brine shrimp and daphnia.",
+      "Transparent body makes ill health easy to spot; a cloudy or milky appearance signals a sick or dying fish."
+    ],
+    "subspeciesNote": "This is the true aquarium glass catfish; the similar Kryptopterus bicirrhis is larger, more predatory and rarely the fish actually sold under this name.",
+    "imageAsset": "glass-catfish",
+    "imageCredit": {
+      "author": "Pouzin Olivier",
+      "license": "CC BY 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Kryptopterus_vitreolus_(July_2007).jpg"
+    }
+  },
+  {
+    "id": "upside-down-catfish",
+    "commonName": "Upside-down Catfish",
+    "alsoKnownAs": [
+      "Blotched Upside-down Catfish"
+    ],
+    "scientificName": "Synodontis nigriventris",
+    "careLevel": "beginner",
+    "adultSizeCm": 9.6,
+    "minTankSizeL": 110,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 4,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 5,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 20,
+    "notes": [
+      "A social species best kept in a group of five or more, where it is far more active and confident.",
+      "Naturally swims belly-up to graze food from the underside of leaves and the surface film, so include floating cover and driftwood.",
+      "Largely nocturnal and shy, so offer caves and shade and feed sinking foods after lights-out.",
+      "Omnivorous; accepts sinking pellets, frozen foods and blanched vegetables like zucchini."
+    ],
+    "imageAsset": "upside-down-catfish",
+    "imageCredit": {
+      "author": "John P. Friel Ph.D.",
+      "license": "CC BY 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Synodontis_nigriventris_53146421.jpg"
+    }
+  },
+  {
+    "id": "bolivian-ram",
+    "commonName": "Bolivian Ram",
+    "alsoKnownAs": [
+      "Bolivian Butterfly"
+    ],
+    "scientificName": "Mikrogeophagus altispinosus",
+    "careLevel": "beginner",
+    "adultSizeCm": 8,
+    "minTankSizeL": 75,
+    "tempMinC": 24,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 2,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 40,
+    "notes": [
+      "Provide a soft sand substrate as they naturally sift mouthfuls of sand for food.",
+      "Keep as a bonded pair or a group of six or more in a longer tank to spread aggression.",
+      "They are shy and dislike competition, so add small peaceful dither fish to boost their confidence.",
+      "Maintain pristine water with regular changes as they are sensitive to poor water quality."
+    ],
+    "imageAsset": "bolivian-ram",
+    "imageCredit": {
+      "author": "Frederic.aula",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Mikrogeophagus_altispinosa.JPG"
+    }
+  },
+  {
+    "id": "cockatoo-dwarf-cichlid",
+    "commonName": "Cockatoo Dwarf Cichlid",
+    "alsoKnownAs": [
+      "Cockatoo Cichlid"
+    ],
+    "scientificName": "Apistogramma cacatuoides",
+    "careLevel": "intermediate",
+    "adultSizeCm": 8,
+    "minTankSizeL": 60,
+    "tempMinC": 22,
+    "tempMaxC": 29,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 12,
+    "temperament": "semiAggressive",
+    "minGroupSize": 0,
+    "swimZone": "bottom",
+    "diet": "carnivore",
+    "litersPerAdditionalIndividual": 20,
+    "notes": [
+      "Best kept as a harem of one male with two or three females, each given her own cave or flowerpot to hold territory.",
+      "Tank-bred fish tolerate neutral water, but soft acidic water is needed to breed wild-type stock.",
+      "Offer live or frozen foods such as artemia, daphnia and bloodworm as they are primarily micro-predators.",
+      "Females become very aggressive when guarding fry, so provide broken sight-lines and space for the male to retreat."
+    ],
+    "subspeciesNote": "Most fish sold are the domesticated 'double red' colour form rather than wild-type; care is identical.",
+    "imageAsset": "cockatoo-dwarf-cichlid",
+    "imageCredit": {
+      "author": "Made be Uploader",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Apistogramma_cacatuoides_double_red_male_(cropped).jpg"
+    }
+  },
+  {
+    "id": "electric-yellow-cichlid",
+    "commonName": "Electric Yellow Cichlid",
+    "alsoKnownAs": [
+      "Yellow Lab",
+      "Lemon Yellow Lab"
+    ],
+    "scientificName": "Labidochromis caeruleus",
+    "careLevel": "beginner",
+    "adultSizeCm": 10,
+    "minTankSizeL": 200,
+    "tempMinC": 24,
+    "tempMaxC": 28,
+    "phMin": 7.6,
+    "phMax": 8.6,
+    "ghMin": 10,
+    "ghMax": 20,
+    "temperament": "semiAggressive",
+    "minGroupSize": 5,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 20,
+    "notes": [
+      "Provide hard, alkaline Lake Malawi conditions with plenty of rockwork and caves for territories.",
+      "Keep one male with several females in a colony to diffuse aggression among this relatively mild mbuna.",
+      "Avoid excessive protein and feed a mostly vegetable-based diet to prevent bloat.",
+      "One of the most peaceful and beginner-friendly mbuna, but still not suited to soft-water community fish."
+    ],
+    "imageAsset": "electric-yellow-cichlid",
+    "imageCredit": {
+      "author": "Jmatz at English Wikipedia\n\n(Original text: Julian Matz (talk))",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Labidochromis_caeruleus_(male).jpg"
+    }
+  },
+  {
+    "id": "convict-cichlid",
+    "commonName": "Convict Cichlid",
+    "alsoKnownAs": [
+      "Zebra Cichlid"
+    ],
+    "scientificName": "Amatitlania nigrofasciata",
+    "careLevel": "beginner",
+    "adultSizeCm": 12,
+    "minTankSizeL": 114,
+    "tempMinC": 24,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 9,
+    "ghMax": 20,
+    "temperament": "aggressive",
+    "minGroupSize": 0,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "finNipper": true,
+    "litersPerAdditionalIndividual": 40,
+    "notes": [
+      "Provide plenty of rocks, bogwood and clay caves or flowerpots for hiding and spawning sites.",
+      "Expect heavy substrate digging, so anchor hardy plants or leave them out as delicate ones will be uprooted.",
+      "Best kept as a single bonded pair in a species tank, as they turn violently territorial when breeding.",
+      "A hardy, prolific breeder with strong biparental brood care lasting several weeks."
+    ],
+    "imageAsset": "convict-cichlid",
+    "imageCredit": {
+      "author": "Timmy Toucan",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Pink_Convict_Cichlid.jpg"
+    }
+  },
+  {
+    "id": "firemouth-cichlid",
+    "commonName": "Firemouth Cichlid",
+    "scientificName": "Thorichthys meeki",
+    "careLevel": "beginner",
+    "adultSizeCm": 15,
+    "minTankSizeL": 115,
+    "tempMinC": 22,
+    "tempMaxC": 30,
+    "phMin": 6.5,
+    "phMax": 8.0,
+    "ghMin": 5,
+    "ghMax": 15,
+    "temperament": "semiAggressive",
+    "minGroupSize": 0,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 45,
+    "notes": [
+      "Provide a sandy substrate with rocky caves or driftwood for territory boundaries, as this fish sifts sand and claims a patch of bottom.",
+      "Keep as a bonded pair or a group of eight or more in a larger tank to spread out aggression, which peaks at breeding.",
+      "Very hardy and tolerant of a wide parameter range, making it a good first cichlid.",
+      "Feed a varied omnivore diet of quality pellets plus frozen or live bloodworm, brine shrimp and some vegetable matter."
+    ],
+    "imageAsset": "firemouth-cichlid",
+    "imageCredit": {
+      "author": "George Chernilevsky",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Thorichthys_meeki_2019_G1.jpg"
+    }
+  },
+  {
+    "id": "electric-blue-acara",
+    "commonName": "Electric Blue Acara",
+    "alsoKnownAs": [
+      "Blue Acara"
+    ],
+    "scientificName": "Andinoacara pulcher",
+    "careLevel": "beginner",
+    "adultSizeCm": 15,
+    "minTankSizeL": 110,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.5,
+    "phMax": 8.0,
+    "ghMin": 5,
+    "ghMax": 25,
+    "temperament": "semiAggressive",
+    "minGroupSize": 0,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 50,
+    "notes": [
+      "Commonly sold as a captive-bred colour morph of Andinoacara pulcher with the same care needs.",
+      "Use a soft sand substrate with caves or driftwood, as this active digger sifts the bottom.",
+      "Hardy but sensitive to deteriorating water quality, so run strong biological filtration and keep up regular water changes.",
+      "Peaceful for a cichlid but territorial when spawning, so give tankmates space and avoid very small fish it could eat."
+    ],
+    "subspeciesNote": "The Electric Blue Acara is a captive-bred colour morph of Andinoacara pulcher; all values reflect standard Blue Acara husbandry.",
+    "imageAsset": "electric-blue-acara",
+    "imageCredit": {
+      "author": "Shamekh.yasser",
+      "license": "CC BY 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:The_Electric_Blue_Acara_(Andinoacara_pulcher,_electric_blue_morph).jpg"
+    }
+  },
+  {
+    "id": "jack-dempsey",
+    "commonName": "Jack Dempsey",
+    "scientificName": "Rocio octofasciata",
+    "careLevel": "intermediate",
+    "adultSizeCm": 20,
+    "minTankSizeL": 200,
+    "tempMinC": 22,
+    "tempMaxC": 30,
+    "phMin": 6.5,
+    "phMax": 8.0,
+    "ghMin": 8,
+    "ghMax": 20,
+    "temperament": "aggressive",
+    "minGroupSize": 0,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 75,
+    "notes": [
+      "Provide a footprint of at least 120 cm length with sand substrate, rockwork and driftwood for territory boundaries.",
+      "Keep only with robust tankmates too large to be swallowed, and avoid small or long-finned fish.",
+      "Strong filtration plus regular water changes are needed to handle its heavy waste load.",
+      "Expect strong territoriality and pit-digging when breeding, so give a bonded pair their own space."
+    ],
+    "imageAsset": "jack-dempsey",
+    "imageCredit": {
+      "author": "Petruss",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Rocio_octofasciata1.jpg"
+    }
+  },
+  {
+    "id": "three-spot-gourami",
+    "commonName": "Three-spot Gourami",
+    "alsoKnownAs": [
+      "Blue Gourami",
+      "Opaline Gourami",
+      "Gold Gourami"
+    ],
+    "scientificName": "Trichopodus trichopterus",
+    "careLevel": "beginner",
+    "adultSizeCm": 15,
+    "minTankSizeL": 180,
+    "tempMinC": 24,
+    "tempMaxC": 30,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 3,
+    "ghMax": 25,
+    "temperament": "semiAggressive",
+    "minGroupSize": 0,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 40,
+    "notes": [
+      "Provide a well-planted tank with floating vegetation plus open water at the surface for this air-breathing labyrinth fish.",
+      "Keep only one male, or one male with several females, as mature males become territorial.",
+      "Choose robust tankmates such as larger barbs, characins or loaches and avoid small timid or long-finned species.",
+      "Fit a tight lid and keep the air above the water warm and humid, as the fish must breathe atmospheric air at the surface."
+    ],
+    "subspeciesNote": "Blue, gold, opaline and 'Cosby' gouramis are all colour forms of the one species, Trichopodus trichopterus.",
+    "imageAsset": "three-spot-gourami",
+    "imageCredit": {
+      "author": "Obsidian Soul",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Trichopodus_trichopterus_(3_spot_gourami,_Philippines)_01.jpg"
+    }
+  },
+  {
+    "id": "sparkling-gourami",
+    "commonName": "Sparkling Gourami",
+    "alsoKnownAs": [
+      "Pygmy Gourami"
+    ],
+    "scientificName": "Trichopsis pumila",
+    "careLevel": "intermediate",
+    "adultSizeCm": 4,
+    "minTankSizeL": 40,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 1,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 4,
+    "swimZone": "all",
+    "diet": "carnivore",
+    "litersPerAdditionalIndividual": 5,
+    "notes": [
+      "Keep in a densely planted, mature tank with floating plants and gentle filtration so this shy fish has plenty of cover.",
+      "Provide soft, slightly acidic and stable water, and avoid large or boisterous tankmates that will intimidate it.",
+      "Feed small live and frozen foods such as Daphnia and Artemia; dried foods are accepted but should not be the sole diet.",
+      "Maintain a warm humid air layer and a tight lid, as it gulps surface air and males 'croak' audibly during courtship."
+    ],
+    "imageAsset": "sparkling-gourami",
+    "imageCredit": {
+      "author": "Dezinformator15",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Sparkling_gourami.jpg"
+    }
+  },
+  {
+    "id": "paradise-fish",
+    "commonName": "Paradise Fish",
+    "alsoKnownAs": [
+      "Paradise Gourami"
+    ],
+    "scientificName": "Macropodus opercularis",
+    "careLevel": "beginner",
+    "adultSizeCm": 8,
+    "minTankSizeL": 75,
+    "tempMinC": 16,
+    "tempMaxC": 26,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 5,
+    "ghMax": 20,
+    "temperament": "aggressive",
+    "minGroupSize": 0,
+    "swimZone": "all",
+    "diet": "carnivore",
+    "finNipper": true,
+    "litersPerAdditionalIndividual": 20,
+    "notes": [
+      "Fit a tight-fitting lid and keep a warm humid air layer above the water, as this labyrinth fish breathes atmospheric air.",
+      "Very hardy and tolerant of cool water; it can be kept unheated in most climates and benefits from a cooler winter period.",
+      "Never house two males together unless the tank is very large, and keep two or more females per male to spread aggression.",
+      "Avoid similarly-shaped, long-finned or very small tankmates, as it is nippy and will eat small fish and shrimp."
+    ],
+    "imageAsset": "paradise-fish",
+    "imageCredit": {
+      "author": "André Karwath aka Aka",
+      "license": "CC BY-SA 2.5",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Macropodus_opercularis_-_front_(aka).jpg"
+    }
+  },
+  {
+    "id": "boesemani-rainbowfish",
+    "commonName": "Boeseman's Rainbowfish",
+    "alsoKnownAs": [
+      "Boesemani Rainbowfish"
+    ],
+    "scientificName": "Melanotaenia boesemani",
+    "careLevel": "beginner",
+    "adultSizeCm": 11,
+    "minTankSizeL": 110,
+    "tempMinC": 24,
+    "tempMaxC": 30,
+    "phMin": 7.0,
+    "phMax": 8.0,
+    "ghMin": 10,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 20,
+    "notes": [
+      "Keep in a shoal of at least 6-8, with a mix of males and females to encourage the males' best colour.",
+      "Provide a long tank with dense planting around the edges and plenty of open swimming space in the middle.",
+      "Prefers hard, alkaline water and will not thrive in soft, acidic conditions.",
+      "Feed a varied diet of quality flake plus frozen and live foods to intensify colouration."
+    ],
+    "imageAsset": "boesemani-rainbowfish",
+    "imageCredit": {
+      "author": "H. Zell",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Melanotaenia_boesemani_-_Karlsruhe_Zoo_01.jpg"
+    }
+  },
+  {
+    "id": "dwarf-neon-rainbowfish",
+    "commonName": "Dwarf Neon Rainbowfish",
+    "alsoKnownAs": [
+      "Praecox Rainbowfish"
+    ],
+    "scientificName": "Melanotaenia praecox",
+    "careLevel": "beginner",
+    "adultSizeCm": 7,
+    "minTankSizeL": 55,
+    "tempMinC": 23,
+    "tempMaxC": 28,
+    "phMin": 6.8,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "litersPerAdditionalIndividual": 10,
+    "notes": [
+      "An active shoaling fish best kept in groups of 6 or more so males display their fins and colour.",
+      "Use a heavily planted tank with some floating plants to diffuse light and open water for swimming.",
+      "Maintain high water quality with regular partial water changes as it is sensitive to pollutants.",
+      "Offer a varied omnivorous diet including small live and frozen foods for the brightest colour."
+    ],
+    "imageAsset": "dwarf-neon-rainbowfish",
+    "imageCredit": {
+      "author": "7TP (Krzysztof Bartosik)",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Melanotaenia_praecox.jpg"
+    }
+  },
+  {
+    "id": "scarlet-badis",
+    "commonName": "Scarlet Badis",
+    "alsoKnownAs": [
+      "Scarlet Gem Badis"
+    ],
+    "scientificName": "Dario dario",
+    "careLevel": "intermediate",
+    "adultSizeCm": 2,
+    "minTankSizeL": 40,
+    "tempMinC": 22,
+    "tempMaxC": 26,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 0,
+    "swimZone": "middle",
+    "diet": "carnivore",
+    "litersPerAdditionalIndividual": 5,
+    "notes": [
+      "A tiny, shy micropredator that needs a calm, densely planted nano tank and should not be housed with boisterous tankmates.",
+      "Feed small live or frozen foods such as baby brine shrimp, daphnia, and microworms; it often ignores dry foods.",
+      "Males are territorial toward each other, so keep one male with several females or give each male about 30 cm of space.",
+      "Sensitive to poor conditions, so keep water stable and do regular small water changes."
+    ],
+    "subspeciesNote": "Often confused with other small Dario species; true Dario dario males show seven iridescent blue vertical bars.",
+    "imageAsset": "scarlet-badis",
+    "imageCredit": {
+      "author": "ATuin-hek at English Wikipedia",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Dario_dario_male.jpg"
+    }
   }
 ]
