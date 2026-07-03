@@ -15,7 +15,9 @@ enum TropiFishSchema {
     static let models: [any PersistentModel.Type] = [
         Tank.self,
         TestReading.self,
-        WaterChangeEvent.self
+        WaterChangeEvent.self,
+        FilterMediaItem.self,
+        StockedSpecies.self
     ]
 
     static var schema: Schema { Schema(models) }

@@ -36,13 +36,29 @@ enum SampleData {
                                        nitrate: no3, kh: 14, gh: 16, ph: ph, temperatureC: t, tank: cichlid))
         }
         context.insert(WaterChangeEvent(timestamp: daysAgo(6), percentChanged: 25, tank: cichlid))
+        // Fluval 407 media: an overdue carbon (changed 40d ago, 30d cycle), a
+        // due-soon BioMax, and a fresh mechanical foam — exercises all three
+        // traffic-light states in the Filter section.
+        cichlid.filterModel = "Fluval 407"
+        context.insert(FilterMediaItem(kind: .carbon, lastChanged: daysAgo(40), tank: cichlid))
+        context.insert(FilterMediaItem(kind: .bioMax, lastChanged: daysAgo(177), tank: cichlid))
+        context.insert(FilterMediaItem(kind: .mechanicalFoam, lastChanged: daysAgo(20), tank: cichlid))
 
-        // A healthy planted tank, all in range.
+        // Cichlid tank stock: an angelfish + a big Oscar hint at predation/size
+        // conflicts if neons were added, and drive a heavier stocking level.
+        context.insert(StockedSpecies(speciesID: "angelfish", quantity: 2, tank: cichlid))
+        context.insert(StockedSpecies(speciesID: "bristlenose-pleco", quantity: 1, tank: cichlid))
+
+        // A healthy planted tank, all in range, with a balanced community —
+        // but only 3 neons, so the stocking check flags a shoaling shortfall.
         let planted = Tank(name: "Office Planted 60", volumeLiters: 60,
                            dateEstablished: daysAgo(120), tankType: .planted)
         context.insert(planted)
         context.insert(TestReading(timestamp: daysAgo(2), ammoniaTAN: 0, nitrite: 0,
                                    nitrate: 15, kh: 5, gh: 8, ph: 6.8, temperatureC: 25, tank: planted))
+        context.insert(StockedSpecies(speciesID: "neon-tetra", quantity: 3, tank: planted))
+        context.insert(StockedSpecies(speciesID: "harlequin-rasbora", quantity: 8, tank: planted))
+        context.insert(StockedSpecies(speciesID: "bronze-cory", quantity: 6, tank: planted))
 
         // A cycling shrimp nano — ammonia present, but flagged as cycling.
         let shrimp = Tank(name: "Shrimp Nano", volumeLiters: 25,

@@ -12,6 +12,13 @@ enum ReminderScheduler {
         "water-change-\(tank.id.uuidString)"
     }
 
+    /// One filter reminder per tank (for the soonest-due media item), keyed by
+    /// the tank so rescheduling replaces it and we never spam a notification per
+    /// media item.
+    private static func filterIdentifier(for tank: Tank) -> String {
+        "filter-media-\(tank.id.uuidString)"
+    }
+
     /// Ask for permission the first time a reminder is actually needed.
     @discardableResult
     static func requestAuthorization() async -> Bool {
@@ -44,7 +51,38 @@ enum ReminderScheduler {
         let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: effectiveDate)
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
+        add(request, requestingPermission: requestingPermission)
+    }
 
+    /// Schedule (or replace) the single filter-media reminder for a tank, fired
+    /// on the due date of whichever tracked media is due soonest. A tank with no
+    /// tracked media clears any pending filter reminder.
+    ///
+    /// `requestingPermission` should be `true` only from an explicit user action
+    /// (marking media changed, adding media), never from a launch-time refresh.
+    static func rescheduleFilterReminder(for tank: Tank, requestingPermission: Bool = false) {
+        let id = filterIdentifier(for: tank)
+        center.removePendingNotificationRequests(withIdentifiers: [id])
+
+        guard let soonest = tank.filterMediaSoonestDue else { return }
+
+        // Fire on the due date, but never in the past — nudge a day out if already due.
+        let effectiveDate = max(soonest.dueDate, Date().addingTimeInterval(24 * 60 * 60))
+
+        let content = UNMutableNotificationContent()
+        content.title = "Filter media due"
+        content.body = "\(soonest.title) in \(tank.name) is due for a change."
+        content.sound = .default
+
+        let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: effectiveDate)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+        let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
+        add(request, requestingPermission: requestingPermission)
+    }
+
+    /// Add a request, respecting the current authorization status. Cold-prompts
+    /// only when `requestingPermission` is set (i.e. driven by a user action).
+    private static func add(_ request: UNNotificationRequest, requestingPermission: Bool) {
         Task {
             let status = await center.notificationSettings().authorizationStatus
             switch status {
@@ -58,8 +96,11 @@ enum ReminderScheduler {
         }
     }
 
-    /// Cancel a tank's pending reminder (e.g. on tank deletion).
+    /// Cancel a tank's pending reminders (e.g. on tank deletion) — both the
+    /// water-change and filter reminders.
     static func cancel(for tank: Tank) {
-        center.removePendingNotificationRequests(withIdentifiers: [identifier(for: tank)])
+        center.removePendingNotificationRequests(
+            withIdentifiers: [identifier(for: tank), filterIdentifier(for: tank)]
+        )
     }
 }

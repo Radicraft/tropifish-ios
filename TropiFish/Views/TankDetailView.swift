@@ -6,12 +6,17 @@ import SwiftData
 /// per-parameter breakdown, and links into history and trend charts.
 struct TankDetailView: View {
     @Bindable var tank: Tank
+    @Environment(\.modelContext) private var modelContext
 
     @State private var isLoggingTest = false
     @State private var isLoggingWaterChange = false
     @State private var isEditingTank = false
+    @State private var isAddingSpecies = false
+    /// Set after adding a fish that isn't a clean match, to surface a warning.
+    @State private var addWarning: CompatibilityReport?
     #if DEBUG
     @State private var debugShowCharts = ProcessInfo.processInfo.arguments.contains("-openCharts")
+    @State private var debugShowFilter = ProcessInfo.processInfo.arguments.contains("-openFilterMedia")
     #endif
 
     private var assessment: TankAssessment { AssessmentEngine.assess(tank: tank) }
@@ -38,6 +43,8 @@ struct TankDetailView: View {
                 guidanceSection
             }
 
+            stockSection
+
             Section {
                 NavigationLink {
                     TestHistoryView(tank: tank)
@@ -50,6 +57,8 @@ struct TankDetailView: View {
                     Label("Trends", systemImage: "chart.xyaxis.line")
                 }
             }
+
+            filterSection
 
             setupSection
         }
@@ -68,9 +77,25 @@ struct TankDetailView: View {
         .sheet(isPresented: $isEditingTank) {
             EditTankView(tank: tank)
         }
+        .sheet(isPresented: $isAddingSpecies) {
+            NavigationStack {
+                SpeciesBrowserView(onSelect: addSpecies, compatibilityTank: tank)
+            }
+        }
+        .alert("Heads up", isPresented: Binding(
+            get: { addWarning != nil },
+            set: { if !$0 { addWarning = nil } }
+        ), presenting: addWarning) { _ in
+            Button("Keep it", role: .cancel) {}
+        } message: { report in
+            Text(addWarningMessage(report))
+        }
         #if DEBUG
         .navigationDestination(isPresented: $debugShowCharts) {
             ParameterChartsView(tank: tank)
+        }
+        .navigationDestination(isPresented: $debugShowFilter) {
+            FilterMediaView(tank: tank)
         }
         #endif
     }
@@ -148,6 +173,152 @@ struct TankDetailView: View {
                     .padding(.vertical, 2)
                 }
             }
+        }
+    }
+
+    // MARK: - Stock
+
+    @ViewBuilder
+    private var stockSection: some View {
+        let report = StockingAssessment.assess(tank: tank)
+        Section {
+            if !tank.stock.isEmpty {
+                stockingSummary(report)
+            }
+            ForEach(tank.stock.sorted { $0.dateAdded < $1.dateAdded }) { stocked in
+                stockRow(stocked)
+            }
+            .onDelete(perform: deleteStock)
+
+            Button {
+                isAddingSpecies = true
+            } label: {
+                Label("Add Fish", systemImage: "plus.circle.fill")
+            }
+        } header: {
+            Text("Stock")
+        } footer: {
+            if !tank.stock.isEmpty {
+                Text("Stocking level is an estimate to guide you — your water tests are the real measure of whether a tank is coping.")
+            }
+        }
+    }
+
+    private func stockingSummary(_ report: StockingReport) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            HStack {
+                TrafficLightBadgeLabel(light: report.overall, text: report.level.displayName)
+                Spacer()
+                if report.percentEstimate > 0 {
+                    Text("~\(report.percentEstimate)% full")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            Text(report.concerns.first?.message ?? report.level.summary)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .padding(.vertical, 2)
+    }
+
+    @ViewBuilder
+    private func stockRow(_ stocked: StockedSpecies) -> some View {
+        if let species = stocked.species {
+            NavigationLink {
+                SpeciesDetailView(species: species)
+            } label: {
+                HStack(spacing: 12) {
+                    SpeciesImage(species: species, cornerRadius: 6)
+                        .frame(width: 40, height: 40)
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text(species.commonName)
+                        Text(species.scientificName)
+                            .font(.caption2).italic()
+                            .foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                    Stepper("×\(stocked.quantity)", value: Binding(
+                        get: { stocked.quantity },
+                        set: { stocked.quantity = max(1, $0) }
+                    ), in: 1...999)
+                    .labelsHidden()
+                    .fixedSize()
+                    Text("×\(stocked.quantity)")
+                        .font(.callout.monospacedDigit())
+                        .foregroundStyle(.secondary)
+                }
+            }
+        } else {
+            // Species slug not in the current catalog (older data / removed entry).
+            Label(stocked.speciesID, systemImage: "questionmark.circle")
+                .foregroundStyle(.secondary)
+        }
+    }
+
+    private func addSpecies(_ species: Species) {
+        // Merge into an existing entry if already stocked, else insert.
+        if let existing = tank.stock.first(where: { $0.speciesID == species.id }) {
+            existing.quantity += 1
+        } else {
+            let entry = StockedSpecies(speciesID: species.id, tank: tank)
+            modelContext.insert(entry)
+        }
+        // Warn if the newly-added fish isn't a clean match for the tank.
+        let report = CompatibilityEngine.assess(candidate: species, against: tank)
+        if report.overall != .green { addWarning = report }
+    }
+
+    private func deleteStock(at offsets: IndexSet) {
+        let sorted = tank.stock.sorted { $0.dateAdded < $1.dateAdded }
+        for index in offsets { modelContext.delete(sorted[index]) }
+    }
+
+    private func addWarningMessage(_ report: CompatibilityReport) -> String {
+        let lead = report.overall == .red
+            ? "\(report.candidate.commonName) may not be a good fit for \(tank.name):"
+            : "A couple of things to watch with \(report.candidate.commonName) in \(tank.name):"
+        let reasons = report.concerns.prefix(3).map { "• \($0.message)" }.joined(separator: "\n")
+        return lead + "\n\n" + reasons
+    }
+
+    // MARK: - Filter
+
+    @ViewBuilder
+    private var filterSection: some View {
+        Section("Filter") {
+            NavigationLink {
+                FilterMediaView(tank: tank)
+            } label: {
+                if let soonest = tank.filterMediaSoonestDue {
+                    let status = soonest.status()
+                    HStack(spacing: 12) {
+                        Image(systemName: "square.stack.3d.up")
+                            .foregroundStyle(status.trafficLight.color)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Filter media")
+                            Text(filterSummary(for: soonest, status: status))
+                                .font(.caption)
+                                .foregroundStyle(status == .ok ? .secondary : status.trafficLight.color)
+                        }
+                    }
+                } else {
+                    Label("Track filter media", systemImage: "square.stack.3d.up")
+                }
+            }
+        }
+    }
+
+    private func filterSummary(for item: FilterMediaItem, status: FilterMediaStatus) -> String {
+        let days = item.daysUntilDue()
+        switch status {
+        case .overdue:
+            let by = -days
+            return "\(item.title) overdue" + (by > 0 ? " by \(by) day\(by == 1 ? "" : "s")" : " today")
+        case .dueSoon:
+            return days == 0 ? "\(item.title) due today" : "\(item.title) due in \(days) day\(days == 1 ? "" : "s")"
+        case .ok:
+            return "Next: \(item.title), \(item.dueDate.formatted(date: .abbreviated, time: .omitted))"
         }
     }
 

@@ -21,10 +21,64 @@ struct TropiFishApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TankListView()
+            RootTabView()
         }
         .modelContainer(container)
     }
+}
+
+/// App shell: the tank dashboard and the standalone "Fish Guide" browser as
+/// peer tabs (species-suitability feature), so a keeper can look up a fish in a
+/// shop without first drilling into a tank.
+struct RootTabView: View {
+    @State private var selection = 0
+    @State private var guidePath: [Species] = []
+
+    var body: some View {
+        TabView(selection: $selection) {
+            TankListView()
+                .tabItem { Label("Tanks", systemImage: "drop.fill") }
+                .tag(0)
+
+            NavigationStack(path: $guidePath) {
+                SpeciesBrowserView(onSelect: nil, compatibilityTank: nil)
+                    .navigationDestination(for: Species.self) { species in
+                        SpeciesDetailView(species: species)
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .primaryAction) {
+                            NavigationLink {
+                                ImageCreditsView()
+                            } label: {
+                                Label("Photo Credits", systemImage: "info.circle")
+                            }
+                        }
+                    }
+            }
+            .tabItem { Label("Fish Guide", systemImage: "fish.fill") }
+            .tag(1)
+        }
+        #if DEBUG
+        .onAppear(perform: applyDebugDeepLinks)
+        #endif
+    }
+
+    #if DEBUG
+    /// QA deep links, mirroring the `-openTank=` / `-openCharts` pattern used in
+    /// the tank views, so the Fish Guide surfaces can be screenshotted headlessly.
+    private func applyDebugDeepLinks() {
+        let args = ProcessInfo.processInfo.arguments
+        if let arg = args.first(where: { $0.hasPrefix("-openSpecies=") }) {
+            let slug = arg.replacingOccurrences(of: "-openSpecies=", with: "")
+            if let species = SpeciesCatalog.shared.byID(slug) {
+                selection = 1
+                guidePath = [species]
+                return
+            }
+        }
+        if args.contains("-openFishGuide") { selection = 1 }
+    }
+    #endif
 }
 
 /// Presents water-change reminders even while the app is in the foreground, so a

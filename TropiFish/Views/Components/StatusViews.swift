@@ -19,6 +19,26 @@ struct TrafficLightBadge: View {
     }
 }
 
+/// Like `TrafficLightBadge` but with caller-supplied text, for statuses that
+/// aren't the fixed water traffic-light wording (e.g. a tank's stocking level).
+struct TrafficLightBadgeLabel: View {
+    let light: TrafficLight
+    let text: String
+
+    var body: some View {
+        Label {
+            Text(text)
+        } icon: {
+            Image(systemName: light.systemImage)
+        }
+        .font(.subheadline.weight(.semibold))
+        .foregroundStyle(light.color)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 6)
+        .background(light.color.opacity(0.14), in: Capsule())
+    }
+}
+
 /// A small directional glyph for a parameter's trend (brief §6.1).
 struct TrendGlyph: View {
     let trend: TrendDirection

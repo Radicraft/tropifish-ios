@@ -30,6 +30,10 @@ final class Tank {
     /// Water-change reminder cadence in days (brief §4.6). `nil` = reminders off.
     var reminderIntervalDays: Int?
 
+    /// Optional filter model label, e.g. "Fluval 407" (filter-maintenance
+    /// feature). Purely descriptive; the media schedule lives on `filterMedia`.
+    var filterModel: String?
+
     /// Per-tank safe ranges and stability thresholds, seeded from the preset at
     /// creation and user-overridable (brief §3).
     var targets: ParameterTargets
@@ -44,6 +48,14 @@ final class Tank {
     @Relationship(deleteRule: .cascade, inverse: \WaterChangeEvent.tank)
     var waterChanges: [WaterChangeEvent] = []
 
+    // Filter media tracked for maintenance reminders (filter-maintenance feature).
+    @Relationship(deleteRule: .cascade, inverse: \FilterMediaItem.tank)
+    var filterMedia: [FilterMediaItem] = []
+
+    // Species stocked in this tank (species-suitability feature).
+    @Relationship(deleteRule: .cascade, inverse: \StockedSpecies.tank)
+    var stock: [StockedSpecies] = []
+
     init(
         name: String,
         volumeLiters: Double,
@@ -52,6 +64,7 @@ final class Tank {
         isCycling: Bool = false,
         tapWaterNitrate: Double? = nil,
         reminderIntervalDays: Int? = 7,
+        filterModel: String? = nil,
         targets: ParameterTargets? = nil,
         createdAt: Date = Date()
     ) {
@@ -62,6 +75,7 @@ final class Tank {
         self.isCycling = isCycling
         self.tapWaterNitrate = tapWaterNitrate
         self.reminderIntervalDays = reminderIntervalDays
+        self.filterModel = filterModel
         // Default to the preset's ranges unless explicit overrides are supplied.
         self.targets = targets ?? tankType.defaultTargets
         self.createdAt = createdAt
@@ -80,5 +94,16 @@ extension Tank {
 
     var lastWaterChange: WaterChangeEvent? {
         waterChanges.max { $0.timestamp < $1.timestamp }
+    }
+
+    /// The filter media due next — drives the tank's Filter-section summary and
+    /// its single filter reminder. `nil` when no media is tracked.
+    var filterMediaSoonestDue: FilterMediaItem? {
+        filterMedia.min { $0.dueDate < $1.dueDate }
+    }
+
+    /// The worst status across all tracked filter media, for the section badge.
+    func filterMediaWorstStatus(now: Date = Date()) -> FilterMediaStatus? {
+        filterMedia.map { $0.status(now: now) }.max()
     }
 }

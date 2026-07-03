@@ -72,6 +72,10 @@ struct TankListView: View {
             for tank in tanks where tank.reminderIntervalDays != nil {
                 ReminderScheduler.reschedule(for: tank)
             }
+            // Same for filter-media reminders — refresh whichever media is due next.
+            for tank in tanks where !tank.filterMedia.isEmpty {
+                ReminderScheduler.rescheduleFilterReminder(for: tank)
+            }
         }
     }
 
