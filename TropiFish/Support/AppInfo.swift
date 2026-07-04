@@ -32,7 +32,7 @@ enum AppInfo {
         Feature(icon: "text.bubble.fill", title: "Know what to do",
                 detail: "Plain-English guidance that catches slow trends early and tells you the next step, not just that something's off."),
         Feature(icon: "fish.fill", title: "Stock the right fish",
-                detail: "A built-in guide to 120 species with photos, and a compatibility check that flags anything that won't suit your water or tank size."),
+                detail: "A built-in guide to over 130 species with photos, and a compatibility check that flags anything that won't suit your water or tank size."),
         Feature(icon: "chart.xyaxis.line", title: "See the trends",
                 detail: "Every parameter charted over time, so a slow drift shows up long before it becomes a problem."),
         Feature(icon: "wrench.and.screwdriver.fill", title: "Stay on top of maintenance",
