@@ -26,15 +26,15 @@ final class AccessManager: ObservableObject {
         case failed(String)
     }
 
-    private let defaults = UserDefaults.standard
-    private let trialStartKey = "trialStartDate"
     private var updatesTask: Task<Void, Never>?
+    /// Cached trial start (Keychain-backed via `TrialStore` so a reinstall can't
+    /// reset it). Resolved once at init.
+    private(set) var trialStartDate: Date
 
     init() {
-        // Stamp the trial start on the very first launch, then never move it.
-        if defaults.object(forKey: trialStartKey) == nil {
-            defaults.set(Date(), forKey: trialStartKey)
-        }
+        // Keychain is the source of truth: survives delete/reinstall, so the
+        // 14-day trial can't be farmed by reinstalling.
+        trialStartDate = TrialStore.resolveStart()
         #if DEBUG
         applyDebugOverrides()
         #endif
@@ -45,10 +45,6 @@ final class AccessManager: ObservableObject {
     deinit { updatesTask?.cancel() }
 
     // MARK: - Trial window
-
-    var trialStartDate: Date {
-        defaults.object(forKey: trialStartKey) as? Date ?? Date()
-    }
 
     var trialEndDate: Date {
         Calendar.current.date(byAdding: .day, value: AppInfo.trialLengthDays, to: trialStartDate) ?? trialStartDate
@@ -163,7 +159,9 @@ final class AccessManager: ObservableObject {
     private func applyDebugOverrides() {
         let args = ProcessInfo.processInfo.arguments
         func setStart(daysAgo: Int) {
-            defaults.set(Calendar.current.date(byAdding: .day, value: -daysAgo, to: Date()), forKey: trialStartKey)
+            let date = Calendar.current.date(byAdding: .day, value: -daysAgo, to: Date()) ?? Date()
+            TrialStore.saveStart(date)
+            trialStartDate = date
         }
         if args.contains("-freshTrial")  { setStart(daysAgo: 0) }
         if args.contains("-endingTrial") { setStart(daysAgo: AppInfo.trialLengthDays - 2) }
