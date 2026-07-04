@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TropiFish — Support</title>
+<style>
+  :root { color-scheme: light dark; --tint: #0f9b8e; --bg: #ffffff; --fg: #1c1c1e; --muted: #6b6b70; --card: #f4f5f7; --line: #e3e4e8; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0e0f11; --fg: #ecedef; --muted: #9a9ba1; --card: #17181b; --line: #2a2b30; --tint: #35c9ba; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 22px 80px; }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  header .drop { width: 34px; height: 34px; color: var(--tint); }
+  h1 { font-size: 30px; margin: 24px 0 6px; letter-spacing: -0.02em; }
+  h2 { font-size: 20px; margin: 32px 0 6px; letter-spacing: -0.01em; }
+  p { margin: 10px 0; }
+  a { color: var(--tint); }
+  .lead { font-size: 19px; color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 22px 0; }
+  .qa { margin: 18px 0; }
+  .q { font-weight: 600; }
+  .a { color: var(--fg); margin-top: 2px; }
+  .contact { display: inline-block; margin-top: 6px; background: var(--tint); color: #fff; text-decoration: none;
+    padding: 12px 22px; border-radius: 999px; font-weight: 600; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg class="drop" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5C12 2.5 5 10.2 5 15a7 7 0 0 0 14 0c0-4.8-7-12.5-7-12.5z"/></svg>
+    <strong>TropiFish</strong>
+  </header>
+
+  <h1>Support</h1>
+  <p class="lead">A precision log for your aquarium water, fish and filter — built by tropical-fish keepers.</p>
+
+  <div class="card">
+    Need a hand, found something that looks wrong, or want a species or feature added? Email us — a real person reads every message.
+    <div><a class="contact" href="mailto:mikesoft98@gmail.com?subject=TropiFish%20support">Email support</a></div>
+  </div>
+
+  <h2>Common questions</h2>
+
+  <div class="qa">
+    <div class="q">How do I log a water test?</div>
+    <div class="a">Open a tank and tap <em>Log Test</em>. Enter whichever parameters you measured — you can skip any you didn't test — and save. Your tank's traffic-light status and guidance update straight away.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Why does the app show a different ammonia value than my kit?</div>
+    <div class="a">Your kit measures <em>total</em> ammonia. TropiFish also calculates the <em>toxic</em> portion (un-ionised NH₃) from your pH and temperature, because the same reading can be harmless or dangerous depending on your water. Log ammonia, pH and temperature together to see it.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Do reminders work if I'm offline?</div>
+    <div class="a">Yes. All reminders are scheduled locally on your device and need no internet connection. Make sure notifications are allowed for TropiFish in iOS Settings.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Is my data backed up or synced?</div>
+    <div class="a">Your data is stored privately on your device and is included in your normal encrypted iPhone/iCloud device backup. TropiFish itself has no servers and never uploads your data. Deleting the app removes its data permanently.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">How accurate is the fish guide?</div>
+    <div class="a">The species care ranges and compatibility checks are sensible, well-researched starting points — but TropiFish is a guide to use alongside your own judgement, not a substitute for it. Always cross-check anything important for your fish, and tell us if you spot something that looks off.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Which devices are supported?</div>
+    <div class="a">iPhone and iPad running a recent version of iOS/iPadOS.</div>
+  </div>
+
+  <h2>Contact</h2>
+  <p>Email <a href="mailto:mikesoft98@gmail.com">mikesoft98@gmail.com</a> and we'll get back to you.</p>
+
+  <footer>© 2026 TropiFish. Built by fishkeepers.</footer>
+</div>
+</body>
+</html>
