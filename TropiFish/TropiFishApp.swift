@@ -7,6 +7,8 @@ import UserNotifications
 @main
 struct TropiFishApp: App {
     let container: ModelContainer
+    /// Owns trial + purchase state for the free-trial → one-time-unlock model.
+    @StateObject private var access = AccessManager()
     private let notificationDelegate = NotificationDelegate()
 
     init() {
@@ -22,6 +24,7 @@ struct TropiFishApp: App {
     var body: some Scene {
         WindowGroup {
             RootTabView()
+                .environmentObject(access)
         }
         .modelContainer(container)
     }
@@ -31,6 +34,7 @@ struct TropiFishApp: App {
 /// peer tabs (species-suitability feature), so a keeper can look up a fish in a
 /// shop without first drilling into a tank.
 struct RootTabView: View {
+    @EnvironmentObject private var access: AccessManager
     @State private var selection = 0
     @State private var guidePath: [Species] = []
     @State private var plantPath: [Plant] = []
@@ -78,6 +82,9 @@ struct RootTabView: View {
             .tag(2)
         }
         .onChange(of: selection) { _, _ in Haptics.selection() }
+        .sheet(isPresented: $access.isShowingPaywall) {
+            PaywallView()
+        }
         #if DEBUG
         .onAppear(perform: applyDebugDeepLinks)
         #endif
@@ -106,6 +113,7 @@ struct RootTabView: View {
             }
         }
         if args.contains("-openPlantGuide") { selection = 2 }
+        if args.contains("-openPaywall") { access.isShowingPaywall = true }
     }
     #endif
 }

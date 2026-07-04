@@ -48,7 +48,7 @@ STAY ON TOP OF MAINTENANCE
 MADE FOR REAL FISHKEEPERS
 TropiFish is a guide to use alongside your own judgement, not a replacement for it. Spotted something you'd change, or want a species added? There's a "Get in touch" link right in the app — we read every message.
 
-No ads. No subscriptions. No tracking. Just a tool that helps you keep your fish healthy.
+Free to try for 14 days, then a single one-time purchase to keep it — no subscription, ever. No ads. No tracking. Just a tool that helps you keep your fish healthy, made by a small studio of hobbyists whose purchase funds future updates.
 
 ## What's New (version 1.0)
 First release. Log water tests, understand what they mean, get plain-English guidance, browse a 130+ species fish guide with compatibility checks, and track filter maintenance — all on-device.
@@ -56,6 +56,11 @@ First release. Log water tests, understand what they mean, get plain-English gui
 ## App Store Connect settings
 - Category: Utilities (secondary: Lifestyle)
 - Age rating: 4+
-- Price: (your call) — apply to the Small Business Program (15% commission)
+- Price: **Free** (with In-App Purchases). The app is free to download; a 14-day
+  in-app trial then requires a one-time non-consumable unlock.
+- In-App Purchase: **"TropiFish Full Access"** — Non-Consumable, £4.99, product ID
+  `com.fathom.TropiFish.fullaccess`. Create it in App Store Connect and submit it
+  *with* the app's first version. (Local testing uses `TropiFish.storekit`.)
+- Apply to the **Small Business Program** (15% commission — applies to IAP too).
 - App Privacy: Data Not Collected
 - Export compliance: already declared in-app (ITSAppUsesNonExemptEncryption = NO)

@@ -1,0 +1,35 @@
+{
+  "identifier" : "B1F2A3C4-0001-4000-8000-00000000CAFE",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "100001",
+      "localizations" : [
+        {
+          "description" : "Unlock every TropiFish feature forever with a single one-time purchase. No subscription.",
+          "displayName" : "TropiFish Full Access",
+          "locale" : "en_GB"
+        }
+      ],
+      "productID" : "com.fathom.TropiFish.fullaccess",
+      "referenceName" : "Full Access",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "0",
+    "_developerTeamID" : "VQQCV6BB8R",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 0,
+    "_locale" : "en_GB",
+    "_storefront" : "GBR",
+    "_storeKitErrors" : []
+  },
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

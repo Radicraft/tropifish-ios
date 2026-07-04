@@ -17,6 +17,16 @@ enum AppInfo {
     /// support/feedback contact — confirm it before an App Store release.
     static let supportEmail = "mikesoft98@gmail.com"
 
+    /// Non-consumable "unlock the full app" product (free-trial → one-time-buy
+    /// model). The price shown to the user comes from StoreKit's localised
+    /// `displayPrice`; this literal is only a fallback for when the product can't
+    /// be loaded (e.g. offline, or before the App Store Connect entry exists).
+    static let unlockProductID = "com.fathom.TropiFish.fullaccess"
+    static let unlockPriceFallback = "£4.99"
+
+    /// Length of the free trial before the unlock is required.
+    static let trialLengthDays = 14
+
     /// A pre-addressed feedback mail link for the "get in touch" affordances.
     static var feedbackMailURL: URL? {
         let subject = "TropiFish feedback"
@@ -43,6 +53,8 @@ enum AppInfo {
                 detail: "Plain-English guidance that catches slow trends early and tells you the next step, not just that something's off."),
         Feature(icon: "fish.fill", title: "Stock the right fish",
                 detail: "A built-in guide to over 130 species with photos, and a compatibility check that flags anything that won't suit your water or tank size."),
+        Feature(icon: "leaf.fill", title: "Track fish and plants",
+                detail: "A photo guide to common aquarium plants, plus a log for every inhabitant and plant — added, trimmed, lost, or just a note on how they're doing."),
         Feature(icon: "chart.xyaxis.line", title: "See the trends",
                 detail: "Every parameter charted over time, so a slow drift shows up long before it becomes a problem."),
         Feature(icon: "wrench.and.screwdriver.fill", title: "Stay on top of maintenance",

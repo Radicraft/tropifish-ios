@@ -7,12 +7,16 @@ import SwiftData
 struct TankDetailView: View {
     @Bindable var tank: Tank
     @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject private var access: AccessManager
+    @Environment(\.requestReview) private var requestReview
 
     @State private var isLoggingTest = false
     @State private var isLoggingWaterChange = false
     @State private var isEditingTank = false
     @State private var isAddingSpecies = false
     @State private var isAddingPlant = false
+    /// Gated navigation into the trends charts (trial/unlock required).
+    @State private var showCharts = false
     /// Set after adding a fish that isn't a clean match, to surface a warning.
     @State private var addWarning: CompatibilityReport?
     #if DEBUG
@@ -29,14 +33,14 @@ struct TankDetailView: View {
 
             Section {
                 Button {
-                    isLoggingTest = true
+                    access.attempt { isLoggingTest = true }
                 } label: {
-                    Label("Log Test", systemImage: "plus.circle.fill")
+                    gatedRowLabel("Log Test", systemImage: "plus.circle.fill")
                 }
                 Button {
-                    isLoggingWaterChange = true
+                    access.attempt { isLoggingWaterChange = true }
                 } label: {
-                    Label("Log Water Change", systemImage: "drop.fill")
+                    gatedRowLabel("Log Water Change", systemImage: "drop.fill")
                 }
             }
 
@@ -55,11 +59,23 @@ struct TankDetailView: View {
                 } label: {
                     Label("History", systemImage: "clock")
                 }
-                NavigationLink {
-                    ParameterChartsView(tank: tank)
+                Button {
+                    access.attempt { showCharts = true }
                 } label: {
-                    Label("Trends", systemImage: "chart.xyaxis.line")
+                    HStack {
+                        Label("Trends", systemImage: "chart.xyaxis.line")
+                        Spacer()
+                        if !access.hasFullAccess {
+                            Image(systemName: "lock.fill")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        Image(systemName: "chevron.right")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(.tertiary)
+                    }
                 }
+                .foregroundStyle(.primary)
             }
 
             filterSection
@@ -98,6 +114,20 @@ struct TankDetailView: View {
             Button("Keep it", role: .cancel) {}
         } message: { report in
             Text(addWarningMessage(report))
+        }
+        .navigationDestination(isPresented: $showCharts) {
+            ParameterChartsView(tank: tank)
+        }
+        .onChange(of: tank.readings.count) { oldCount, newCount in
+            // A new reading landed — record it and, at a genuine positive
+            // moment, ask for a review (throttled and one-shot; see ReviewGate).
+            guard newCount > oldCount else { return }
+            ReviewGate.recordTestLogged()
+            let allClear = assessment.hasData && assessment.overall == .green
+            if ReviewGate.shouldAsk(tankAllClear: allClear) {
+                ReviewGate.markAsked()
+                requestReview()
+            }
         }
         #if DEBUG
         .navigationDestination(isPresented: $debugShowCharts) {
@@ -151,7 +181,7 @@ struct TankDetailView: View {
                 } description: {
                     Text("Log your first water test to see this tank's status and guidance.")
                 } actions: {
-                    Button("Log Test") { isLoggingTest = true }
+                    Button("Log Test") { access.attempt { isLoggingTest = true } }
                         .buttonStyle(.borderedProminent)
                 }
             }
@@ -205,9 +235,9 @@ struct TankDetailView: View {
             .onDelete(perform: deleteStock)
 
             Button {
-                isAddingSpecies = true
+                access.attempt { isAddingSpecies = true }
             } label: {
-                Label("Add Fish", systemImage: "plus.circle.fill")
+                gatedRowLabel("Add Fish", systemImage: "plus.circle.fill")
             }
         } header: {
             Text("Stock")
@@ -315,9 +345,9 @@ struct TankDetailView: View {
             .onDelete(perform: deletePlants)
 
             Button {
-                isAddingPlant = true
+                access.attempt { isAddingPlant = true }
             } label: {
-                Label("Add Plant", systemImage: "leaf.fill")
+                gatedRowLabel("Add Plant", systemImage: "leaf.fill")
             }
         } header: {
             Text("Plants")
@@ -443,6 +473,21 @@ struct TankDetailView: View {
         let liters = tank.volumeLiters
         return liters == liters.rounded() ? String(Int(liters)) : String(format: "%.1f", liters)
     }
+
+    /// A row label that grows a small lock badge once the trial is over and the
+    /// action is gated, so the paywall never feels like it came out of nowhere.
+    @ViewBuilder
+    private func gatedRowLabel(_ title: String, systemImage: String) -> some View {
+        HStack {
+            Label(title, systemImage: systemImage)
+            if !access.hasFullAccess {
+                Spacer()
+                Image(systemName: "lock.fill")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+    }
 }
 
 #Preview {
@@ -452,4 +497,5 @@ struct TankDetailView: View {
     tank.readings.append(TestReading(ammoniaTAN: 0.5, nitrite: 0, nitrate: 30, kh: 12, gh: 16, ph: 8.2, temperatureC: 26, tank: tank))
     return NavigationStack { TankDetailView(tank: tank) }
         .modelContainer(container)
+        .environmentObject(AccessManager())
 }

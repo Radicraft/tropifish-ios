@@ -6,6 +6,7 @@ import SwiftData
 /// arrives in step 6; this is the navigational backbone it will grow into.
 struct TankListView: View {
     @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject private var access: AccessManager
     @Query(sort: \Tank.createdAt, order: .reverse) private var tanks: [Tank]
 
     @State private var activeSheet: ActiveSheet?
@@ -35,6 +36,13 @@ struct TankListView: View {
                     }
                 } else {
                     List {
+                        if !access.isUnlocked {
+                            TrialBanner()
+                                .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 4, trailing: 16))
+                                .listRowSeparator(.hidden)
+                                .listRowBackground(Color.clear)
+                        }
+
                         HomeSummaryCard(tanks: tanks)
                             .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 12, trailing: 16))
                             .listRowSeparator(.hidden)
@@ -166,6 +174,7 @@ private struct TankRow: View {
 #Preview("Empty") {
     TankListView()
         .modelContainer(try! TropiFishSchema.makeContainer(inMemory: true))
+        .environmentObject(AccessManager())
 }
 
 #Preview("With tanks") {
@@ -174,4 +183,5 @@ private struct TankRow: View {
     container.mainContext.insert(Tank(name: "Shrimp Nano", volumeLiters: 30, tankType: .shrimp))
     return TankListView()
         .modelContainer(container)
+        .environmentObject(AccessManager())
 }
