@@ -58,6 +58,7 @@ struct RootTabView: View {
             .tabItem { Label("Fish Guide", systemImage: "fish.fill") }
             .tag(1)
         }
+        .onChange(of: selection) { _, _ in Haptics.selection() }
         #if DEBUG
         .onAppear(perform: applyDebugDeepLinks)
         #endif

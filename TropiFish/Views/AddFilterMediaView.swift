@@ -37,7 +37,7 @@ struct AddFilterMediaView: View {
                         }
                     }
                     if isCustom {
-                        TextField("Name (e.g. Purigen)", text: $customName)
+                        TextField("Name (e.g. phosphate remover)", text: $customName)
                     }
                 } header: {
                     Text("Media")
@@ -115,6 +115,7 @@ struct AddFilterMediaView: View {
             )
             modelContext.insert(item)
         }
+        Haptics.success()
         ReminderScheduler.rescheduleFilterReminder(for: tank, requestingPermission: true)
         dismiss()
     }

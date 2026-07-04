@@ -36,10 +36,10 @@ enum SampleData {
                                        nitrate: no3, kh: 14, gh: 16, ph: ph, temperatureC: t, tank: cichlid))
         }
         context.insert(WaterChangeEvent(timestamp: daysAgo(6), percentChanged: 25, tank: cichlid))
-        // Fluval 407 media: an overdue carbon (changed 40d ago, 30d cycle), a
-        // due-soon BioMax, and a fresh mechanical foam — exercises all three
-        // traffic-light states in the Filter section.
-        cichlid.filterModel = "Fluval 407"
+        // Canister media: an overdue carbon (changed 40d ago, 30d cycle), a
+        // due-soon set of bio rings, and a fresh mechanical foam — exercises all
+        // three traffic-light states in the Filter section.
+        cichlid.filterModel = "External canister"
         context.insert(FilterMediaItem(kind: .carbon, lastChanged: daysAgo(40), tank: cichlid))
         context.insert(FilterMediaItem(kind: .bioMax, lastChanged: daysAgo(177), tank: cichlid))
         context.insert(FilterMediaItem(kind: .mechanicalFoam, lastChanged: daysAgo(20), tank: cichlid))

@@ -1,25 +1,25 @@
 import Foundation
 
 /// The kinds of filter media a tank's filter runs, with sensible default
-/// replacement cadences. Modelled on the **Fluval 07-series** (107/207/307/407)
-/// media stack, whose published schedule is well-defined and close to universal
-/// across canister filters, so it makes a good default the user can adjust.
+/// replacement cadences. These are the generic media types common to almost any
+/// canister or hang-on filter, named by what they *do* rather than by any one
+/// brand, since the same media is sold under many names.
 ///
-/// Fluval's own guidance (07-series FAQ / 406-407 maintenance media): replace
-/// the water-polishing pad, carbon and ammonia-remover monthly; BioFoam and
-/// BioMax roughly every six months (and only *half* the BioMax at a time to
-/// preserve the bacterial colony); mechanical foam roughly yearly. The cardinal
-/// rule — never swap all media at once — is surfaced in the guidance copy.
+/// Typical hobby guidance, which the defaults follow: replace the polishing pad,
+/// carbon and ammonia-remover monthly; biological foam and bio rings roughly
+/// every six months (and only *half* the bio rings at a time to preserve the
+/// bacterial colony); coarse mechanical foam roughly yearly. The cardinal rule —
+/// never swap all media at once — is surfaced in the guidance copy.
 ///
 /// All cadences here are *defaults*: `FilterMediaItem.intervalDays` is seeded
 /// from these but freely overridable per item, mirroring how `TankType` seeds
 /// `ParameterTargets` without locking the user in.
 enum FilterMediaKind: String, Codable, CaseIterable, Identifiable {
-    /// Coarse mechanical foam — rinsed at most water changes, replaced when worn.
+    /// Coarse mechanical foam / sponge — rinsed at most water changes, replaced when worn.
     case mechanicalFoam
-    /// Biological foam insert.
+    /// Biological foam / sponge insert.
     case bioFoam
-    /// Ceramic bio rings / noodles (Fluval BioMax) — replace half at a time.
+    /// Ceramic bio rings / noodles — replace half at a time.
     case bioMax
     /// Activated carbon (chemical) — exhausts fastest.
     case carbon
@@ -34,9 +34,9 @@ enum FilterMediaKind: String, Codable, CaseIterable, Identifiable {
 
     var displayName: String {
         switch self {
-        case .mechanicalFoam:   return "Mechanical Foam"
-        case .bioFoam:          return "BioFoam"
-        case .bioMax:           return "BioMax (Bio Rings)"
+        case .mechanicalFoam:   return "Mechanical Foam / Sponge"
+        case .bioFoam:          return "Biological Foam"
+        case .bioMax:           return "Bio Rings / Ceramic Media"
         case .carbon:           return "Activated Carbon"
         case .waterPolishingPad:return "Water Polishing Pad"
         case .ammoniaRemover:   return "Ammonia Remover"
@@ -56,7 +56,7 @@ enum FilterMediaKind: String, Codable, CaseIterable, Identifiable {
         }
     }
 
-    /// Default replacement cadence in days (Fluval 07-series guidance).
+    /// Default replacement cadence in days (typical hobby guidance).
     var defaultIntervalDays: Int {
         switch self {
         case .carbon, .waterPolishingPad, .ammoniaRemover:  return 30
@@ -81,7 +81,7 @@ enum FilterMediaKind: String, Codable, CaseIterable, Identifiable {
         case .mechanicalFoam:
             return "Rinse in old tank water at water changes; replace about yearly when it stops springing back."
         case .bioFoam:
-            return "Biological media — rinse gently in tank water, replace roughly every 6 months and never at the same time as the BioMax."
+            return "Biological media — rinse gently in tank water, replace roughly every 6 months and never at the same time as your bio rings."
         case .bioMax:
             return "Holds your beneficial bacteria. Replace only half at a time, about every 6 months, so the colony survives."
         case .carbon:
@@ -95,9 +95,9 @@ enum FilterMediaKind: String, Codable, CaseIterable, Identifiable {
         }
     }
 
-    /// The standard Fluval 07-series media set, in basket order, for the one-tap
-    /// "add standard set" action.
-    static let fluval07StandardSet: [FilterMediaKind] = [
+    /// A standard canister-filter media set, in basket order (coarse → fine →
+    /// bio → chemical → polish), for the one-tap "add standard set" action.
+    static let standardSet: [FilterMediaKind] = [
         .mechanicalFoam, .bioFoam, .bioMax, .carbon, .waterPolishingPad
     ]
 }

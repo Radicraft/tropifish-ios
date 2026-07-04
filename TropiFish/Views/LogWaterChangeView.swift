@@ -92,6 +92,7 @@ struct LogWaterChangeView: View {
             modelContext.insert(event)
         }
         // A fresh change resets the reminder clock (§4.6).
+        Haptics.success()
         ReminderScheduler.reschedule(for: tank)
         dismiss()
     }

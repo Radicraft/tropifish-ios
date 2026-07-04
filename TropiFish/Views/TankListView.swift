@@ -8,9 +8,18 @@ struct TankListView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Tank.createdAt, order: .reverse) private var tanks: [Tank]
 
-    @State private var isAddingTank = false
+    @State private var activeSheet: ActiveSheet?
     @State private var path: [Tank] = []
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
+
+    /// The screen's modals, funnelled through a single `.sheet(item:)`. Stacking
+    /// several `.sheet` modifiers on one view is unreliable — only one presents —
+    /// so an enum keeps first-run onboarding, Add Tank and About mutually
+    /// exclusive and each guaranteed to show.
+    private enum ActiveSheet: Identifiable {
+        case welcome, addTank, about
+        var id: Self { self }
+    }
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -21,7 +30,7 @@ struct TankListView: View {
                     } description: {
                         Text("Add your first aquarium to start logging water tests.")
                     } actions: {
-                        Button("Add Tank") { isAddingTank = true }
+                        Button("Add Tank") { activeSheet = .addTank }
                             .buttonStyle(.borderedProminent)
                     }
                 } else {
@@ -47,27 +56,35 @@ struct TankListView: View {
                 TankDetailView(tank: tank)
             }
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        activeSheet = .about
+                    } label: {
+                        Label("About", systemImage: "info.circle")
+                    }
+                }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        isAddingTank = true
+                        activeSheet = .addTank
                     } label: {
                         Label("Add Tank", systemImage: "plus")
                     }
                 }
             }
-            .sheet(isPresented: $isAddingTank) {
-                AddTankView()
-            }
-            .sheet(isPresented: Binding(
-                get: { !hasCompletedOnboarding },
-                set: { if !$0 { hasCompletedOnboarding = true } }
-            )) {
-                WelcomeView()
+            .sheet(item: $activeSheet) { sheet in
+                switch sheet {
+                case .welcome: WelcomeView()
+                case .addTank: AddTankView()
+                case .about:   AboutView()
+                }
             }
         }
         .task {
+            // First run: show onboarding once. WelcomeView sets the flag on close.
+            if !hasCompletedOnboarding { activeSheet = .welcome }
             #if DEBUG
             SampleData.seedIfRequested(modelContext)
+            if ProcessInfo.processInfo.arguments.contains("-openAbout") { activeSheet = .about }
             if let target = ProcessInfo.processInfo.arguments.first(where: { $0.hasPrefix("-openTank=") })?
                 .replacingOccurrences(of: "-openTank=", with: ""),
                let tank = tanks.first(where: { $0.name == target }) {
@@ -87,6 +104,7 @@ struct TankListView: View {
     }
 
     private func deleteTanks(at offsets: IndexSet) {
+        Haptics.impact(.rigid)
         for index in offsets {
             let tank = tanks[index]
             ReminderScheduler.cancel(for: tank)

@@ -145,6 +145,7 @@ struct LogTestView: View {
             )
             modelContext.insert(reading)
         }
+        Haptics.success()
         dismiss()
     }
 

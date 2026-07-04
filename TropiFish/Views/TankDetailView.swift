@@ -240,7 +240,10 @@ struct TankDetailView: View {
                     Spacer()
                     Stepper("×\(stocked.quantity)", value: Binding(
                         get: { stocked.quantity },
-                        set: { stocked.quantity = max(1, $0) }
+                        set: {
+                            stocked.quantity = max(1, $0)
+                            Haptics.selection()
+                        }
                     ), in: 1...999)
                     .labelsHidden()
                     .fixedSize()
@@ -264,12 +267,20 @@ struct TankDetailView: View {
             let entry = StockedSpecies(speciesID: species.id, tank: tank)
             modelContext.insert(entry)
         }
-        // Warn if the newly-added fish isn't a clean match for the tank.
+        // Warn if the newly-added fish isn't a clean match for the tank — the
+        // haptic mirrors the outcome: a caution buzz with the alert, else a
+        // satisfying confirm.
         let report = CompatibilityEngine.assess(candidate: species, against: tank)
-        if report.overall != .green { addWarning = report }
+        if report.overall != .green {
+            addWarning = report
+            Haptics.warning()
+        } else {
+            Haptics.success()
+        }
     }
 
     private func deleteStock(at offsets: IndexSet) {
+        Haptics.impact(.rigid)
         let sorted = tank.stock.sorted { $0.dateAdded < $1.dateAdded }
         for index in offsets { modelContext.delete(sorted[index]) }
     }

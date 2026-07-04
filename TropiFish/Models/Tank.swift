@@ -30,7 +30,7 @@ final class Tank {
     /// Water-change reminder cadence in days (brief §4.6). `nil` = reminders off.
     var reminderIntervalDays: Int?
 
-    /// Optional filter model label, e.g. "Fluval 407" (filter-maintenance
+    /// Optional filter model label, e.g. "External canister" (filter-maintenance
     /// feature). Purely descriptive; the media schedule lives on `filterMedia`.
     var filterModel: String?
 

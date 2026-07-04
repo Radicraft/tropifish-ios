@@ -111,6 +111,7 @@ struct AddTankView: View {
             reminderIntervalDays: remindersOn ? reminderInterval : nil
         )
         modelContext.insert(tank)
+        Haptics.success()
         ReminderScheduler.reschedule(for: tank, requestingPermission: true)
         dismiss()
     }

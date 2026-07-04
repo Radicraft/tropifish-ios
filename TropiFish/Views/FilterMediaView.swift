@@ -64,9 +64,9 @@ struct FilterMediaView: View {
                         Label("Add Media", systemImage: "plus")
                     }
                     Button {
-                        addFluvalStandardSet()
+                        addStandardSet()
                     } label: {
-                        Label("Add Fluval 07-Series Set", systemImage: "square.stack.3d.up.fill")
+                        Label("Add Standard Media Set", systemImage: "square.stack.3d.up.fill")
                     }
                 } label: {
                     Label("Add", systemImage: "plus")
@@ -87,7 +87,7 @@ struct FilterMediaView: View {
         } description: {
             Text("Track your filter's foam, carbon and bio media to get a reminder when each is due for a change.")
         } actions: {
-            Button("Add Fluval 07-Series Set") { addFluvalStandardSet() }
+            Button("Add Standard Media Set") { addStandardSet() }
                 .buttonStyle(.borderedProminent)
             Button("Add Media Manually") { isAdding = true }
         }
@@ -97,23 +97,25 @@ struct FilterMediaView: View {
 
     private func markChanged(_ item: FilterMediaItem) {
         item.lastChanged = Date()
+        Haptics.success()
         ReminderScheduler.rescheduleFilterReminder(for: tank, requestingPermission: true)
     }
 
     private func delete(_ item: FilterMediaItem) {
+        Haptics.impact(.rigid)
         modelContext.delete(item)
         ReminderScheduler.rescheduleFilterReminder(for: tank)
     }
 
-    /// One-tap add of the standard Fluval 07-series media stack, skipping any
-    /// kinds already tracked so it's safe to tap twice.
-    private func addFluvalStandardSet() {
+    /// One-tap add of a standard canister-filter media stack, skipping any kinds
+    /// already tracked so it's safe to tap twice.
+    private func addStandardSet() {
         let existingKinds = Set(tank.filterMedia.map(\.kind))
-        for kind in FilterMediaKind.fluval07StandardSet where !existingKinds.contains(kind) {
+        for kind in FilterMediaKind.standardSet where !existingKinds.contains(kind) {
             let item = FilterMediaItem(kind: kind, tank: tank)
             modelContext.insert(item)
         }
-        if tank.filterModel == nil { tank.filterModel = "Fluval 07-series" }
+        Haptics.success()
         ReminderScheduler.rescheduleFilterReminder(for: tank, requestingPermission: true)
     }
 }

@@ -4041,5 +4041,546 @@
       "license": "CC BY-SA 3.0",
       "sourceURL": "https://commons.wikimedia.org/wiki/File:Pantodon_buchholzi.jpg"
     }
+  },
+  {
+    "id": "amano-shrimp",
+    "commonName": "Amano Shrimp",
+    "alsoKnownAs": [
+      "Japanese Algae Shrimp",
+      "Yamato Shrimp"
+    ],
+    "scientificName": "Caridina multidentata",
+    "careLevel": "beginner",
+    "adultSizeCm": 5,
+    "minTankSizeL": 40,
+    "tempMinC": 18,
+    "tempMaxC": 27,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 6,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 3,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 4,
+    "notes": [
+      "Superb algae eaters, but keep a small group so they graze confidently in the open.",
+      "Best in a mature, planted tank with stable water and plenty of biofilm to browse.",
+      "Extremely sensitive to copper and ammonia spikes, so acclimate slowly and never dose copper meds.",
+      "Larvae need brackish water to develop, so they effectively won't overrun a freshwater tank."
+    ],
+    "imageCredit": {
+      "author": "Richard Bartz, Munich Makro Freak",
+      "license": "CC BY-SA 2.5",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Caridina_multidentata_close.jpg"
+    },
+    "imageAsset": "amano-shrimp"
+  },
+  {
+    "id": "nerite-snail",
+    "commonName": "Nerite Snail",
+    "alsoKnownAs": [
+      "Zebra Nerite",
+      "Tiger Nerite"
+    ],
+    "scientificName": "Neritina natalensis",
+    "careLevel": "beginner",
+    "adultSizeCm": 2.5,
+    "minTankSizeL": 20,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 7.0,
+    "phMax": 8.5,
+    "ghMin": 6,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 0,
+    "swimZone": "bottom",
+    "diet": "herbivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 8,
+    "notes": [
+      "The premier algae grazer, mowing green spot and film algae off glass, rock, and hardscape.",
+      "Won't breed in freshwater, as their eggs only hatch in brackish, so no population explosions.",
+      "Notorious escape artists, so keep a snug lid or leave a gap below the waterline.",
+      "Needs harder, alkaline water and calcium to keep the shell from pitting and eroding."
+    ],
+    "imageCredit": {
+      "author": "Evan Baldonado",
+      "license": "CC BY 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Zebra_Nerite_Snail_(Neritina_natalensis_sp._zebra).jpg"
+    },
+    "imageAsset": "nerite-snail"
+  },
+  {
+    "id": "mystery-snail",
+    "commonName": "Mystery Snail",
+    "alsoKnownAs": [
+      "Spike-topped Apple Snail",
+      "Golden Mystery Snail"
+    ],
+    "scientificName": "Pomacea diffusa",
+    "careLevel": "beginner",
+    "adultSizeCm": 5,
+    "minTankSizeL": 40,
+    "tempMinC": 20,
+    "tempMaxC": 28,
+    "phMin": 7.0,
+    "phMax": 8.0,
+    "ghMin": 8,
+    "ghMax": 18,
+    "temperament": "peaceful",
+    "minGroupSize": 0,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 20,
+    "notes": [
+      "Gentle scavengers that hoover up leftover food, soft algae, and detritus without harming plants.",
+      "Can reach golf-ball size, so give them a real footprint and stable, hard, alkaline water.",
+      "Provide calcium (cuttlebone or hard water) to grow a smooth, crack-free shell.",
+      "They lay egg clutches above the waterline, so leave an air gap and a tight lid since they climb out."
+    ],
+    "imageCredit": {
+      "author": "H. Zell",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Pomacea_diffusa_01.JPG"
+    },
+    "imageAsset": "mystery-snail"
+  },
+  {
+    "id": "assassin-snail",
+    "commonName": "Assassin Snail",
+    "alsoKnownAs": [
+      "Bumblebee Snail",
+      "Snail-Eating Snail"
+    ],
+    "scientificName": "Clea helena",
+    "careLevel": "beginner",
+    "adultSizeCm": 2,
+    "minTankSizeL": 40,
+    "tempMinC": 22,
+    "tempMaxC": 27,
+    "phMin": 7.0,
+    "phMax": 8.0,
+    "ghMin": 6,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 0,
+    "swimZone": "bottom",
+    "diet": "carnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 10,
+    "notes": [
+      "Natural pest-snail control: hunts and eats bladder, ramshorn and Malaysian trumpet snails.",
+      "Harmless to fish and shrimp, but may take tiny shrimplets, so avoid in dedicated shrimp breeding tanks.",
+      "Needs a soft sand or fine gravel bottom so it can burrow and forage.",
+      "Once pest snails run out, supplement with bloodworms, sinking carnivore pellets or dead snails; it will not eat algae or plants."
+    ],
+    "imageCredit": {
+      "author": "Peter Pfeiffer",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Clea_helena.jpg"
+    },
+    "imageAsset": "assassin-snail"
+  },
+  {
+    "id": "siamese-algae-eater",
+    "commonName": "Siamese Algae Eater",
+    "alsoKnownAs": [
+      "SAE",
+      "Siamese Flying Fox"
+    ],
+    "scientificName": "Crossocheilus oblongus",
+    "careLevel": "beginner",
+    "adultSizeCm": 14,
+    "minTankSizeL": 120,
+    "tempMinC": 24,
+    "tempMaxC": 26,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 20,
+    "temperament": "peaceful",
+    "minGroupSize": 4,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 25,
+    "notes": [
+      "One of the few fish that actually eats black beard algae as well as general soft algae.",
+      "Grows to around 14 cm and stays active, so give it a long tank with swimming room and a secure lid, as it can jump.",
+      "Best kept in a loose group of 4-6; single fish or trios can become squabbly and territorial.",
+      "Do not confuse with the Chinese algae eater (Gyrinocheilus) or flying fox; a true SAE has a clean black stripe running into the tail and no coloured fin edges."
+    ],
+    "imageCredit": {
+      "author": "aleander2137",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Siamese_algae_eater_(Crossocheilus_oblongus).jpg"
+    },
+    "imageAsset": "siamese-algae-eater"
+  },
+  {
+    "id": "peppered-cory",
+    "commonName": "Peppered Cory",
+    "alsoKnownAs": [
+      "Peppered Corydoras",
+      "Peppered Catfish"
+    ],
+    "scientificName": "Corydoras paleatus",
+    "careLevel": "beginner",
+    "adultSizeCm": 6,
+    "minTankSizeL": 75,
+    "tempMinC": 18,
+    "tempMaxC": 24,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 10,
+    "notes": [
+      "Classic hardy beginner cory; keep in a shoal of 6 or more or they become shy and inactive.",
+      "Tolerates cooler water than most tropicals and does well in the low 20s C, making it a great unheated or coolwater community fish.",
+      "Use smooth sand or rounded gravel to protect its delicate barbels from wear and infection.",
+      "Omnivore that scavenges the bottom; feed sinking wafers, pellets and frozen foods rather than relying on leftovers."
+    ],
+    "imageCredit": {
+      "author": "NiKo",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Corydoras_paleatus_by_NiKo.jpg"
+    },
+    "imageAsset": "peppered-cory"
+  },
+  {
+    "id": "rainbow-shark",
+    "commonName": "Rainbow Shark",
+    "alsoKnownAs": [
+      "Red-Fin Shark",
+      "Ruby Shark",
+      "Rainbow Sharkminnow"
+    ],
+    "scientificName": "Epalzeorhynchos frenatum",
+    "careLevel": "intermediate",
+    "adultSizeCm": 15,
+    "minTankSizeL": 110,
+    "tempMinC": 24,
+    "tempMaxC": 27,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 15,
+    "temperament": "semiAggressive",
+    "minGroupSize": 0,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 40,
+    "notes": [
+      "Keep only ONE per tank - they are fiercely territorial toward their own kind and similar bottom-dwellers.",
+      "Provide caves, driftwood and rockwork so it can claim a territory and retreat when stressed.",
+      "Aggression eases with a long tank footprint; pair only with mid/top swimmers it will largely ignore.",
+      "Omnivore - feed sinking pellets plus algae wafers and occasional frozen bloodworms."
+    ],
+    "imageCredit": {
+      "author": "Gonzalo Valenzuela",
+      "license": "CC BY-SA 2.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Epalzeorhynchos_frenatum.jpg"
+    },
+    "imageAsset": "rainbow-shark"
+  },
+  {
+    "id": "redtail-shark",
+    "commonName": "Red Tail Shark",
+    "alsoKnownAs": [
+      "Redtail Black Shark",
+      "Red-Tailed Shark",
+      "Fire Tail"
+    ],
+    "scientificName": "Epalzeorhynchos bicolor",
+    "careLevel": "intermediate",
+    "adultSizeCm": 15,
+    "minTankSizeL": 110,
+    "tempMinC": 22,
+    "tempMaxC": 27,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 15,
+    "temperament": "aggressive",
+    "minGroupSize": 0,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 40,
+    "notes": [
+      "Strictly one per tank - even more combative than the Rainbow Shark and will chase similar-shaped fish relentlessly.",
+      "Aquascape with dense plants, caves and driftwood to break sightlines and give it a defensible territory.",
+      "Add it last so existing tankmates aren't seen as intruders in its claimed space.",
+      "Feed a varied omnivore diet - sinking wafers, algae and the occasional meaty frozen food."
+    ],
+    "imageCredit": {
+      "author": "Pseudogastromyzon",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Red-tailed_black_shark.jpg"
+    },
+    "imageAsset": "redtail-shark"
+  },
+  {
+    "id": "bala-shark",
+    "commonName": "Bala Shark",
+    "alsoKnownAs": [
+      "Silver Shark",
+      "Tricolor Shark",
+      "Shark Minnow"
+    ],
+    "scientificName": "Balantiocheilos melanopterus",
+    "careLevel": "advanced",
+    "adultSizeCm": 30,
+    "minTankSizeL": 400,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 5,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 5,
+    "swimZone": "all",
+    "diet": "omnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 100,
+    "notes": [
+      "Not a true shark but a large, fast cyprinid - buy a big tank first, it reaches ~30cm and needs a long footprint to turn.",
+      "Keep a group of 5 or more; lone or paired fish become skittish and stressed.",
+      "Peaceful with similar-sized tankmates but will eat small fish and shrimp once grown - stock accordingly.",
+      "Powerful jumper - a tight-fitting lid is essential, and offer plenty of open mid-water swimming space."
+    ],
+    "imageCredit": {
+      "author": "H. Zell",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Balantiocheilos_melanopterus_-_Karlsruhe_Zoo_02.jpg"
+    },
+    "imageAsset": "bala-shark"
+  },
+  {
+    "id": "silver-dollar",
+    "commonName": "Silver Dollar",
+    "alsoKnownAs": [
+      "Metynnis"
+    ],
+    "scientificName": "Metynnis argenteus",
+    "careLevel": "intermediate",
+    "adultSizeCm": 15,
+    "minTankSizeL": 200,
+    "tempMinC": 24,
+    "tempMaxC": 28,
+    "phMin": 5.5,
+    "phMax": 7.5,
+    "ghMin": 4,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 5,
+    "swimZone": "middle",
+    "diet": "herbivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 40,
+    "notes": [
+      "Keep in a shoal of 5 or more or they turn skittish and jumpy.",
+      "Dedicated plant eaters, so use tough or plastic plants and feed plenty of blanched greens and veg-based flake.",
+      "Big, active swimmers that need a long tank with a secure lid and open swimming space.",
+      "Peaceful for their size but best paired with robust, non-nippy tankmates."
+    ],
+    "imageCredit": {
+      "author": "Brian Gratwicke",
+      "license": "CC BY 2.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Silver_Dollar_Metynnis_argenteus.jpg"
+    },
+    "imageAsset": "silver-dollar"
+  },
+  {
+    "id": "pea-puffer",
+    "commonName": "Pea Puffer",
+    "alsoKnownAs": [
+      "Dwarf Puffer",
+      "Malabar Puffer",
+      "Indian Dwarf Puffer"
+    ],
+    "scientificName": "Carinotetraodon travancoricus",
+    "careLevel": "intermediate",
+    "adultSizeCm": 2.5,
+    "minTankSizeL": 40,
+    "tempMinC": 23,
+    "tempMaxC": 28,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 15,
+    "temperament": "semiAggressive",
+    "minGroupSize": 1,
+    "swimZone": "middle",
+    "diet": "carnivore",
+    "finNipper": true,
+    "litersPerAdditionalIndividual": 15,
+    "notes": [
+      "Feisty fin-nippers, so keep them species-only or with very careful, fast tankmates.",
+      "Need live or frozen meaty foods; a supply of small snails helps wear down their beak.",
+      "Best in a heavily planted tank with sightline breaks to spread out aggression.",
+      "A small group works if you provide extra space and cover, ideally more females than males."
+    ],
+    "imageCredit": {
+      "author": "5snake5",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Carinotetraodon_travancoricus_Seitenansicht.jpg"
+    },
+    "imageAsset": "pea-puffer"
+  },
+  {
+    "id": "peacock-gudgeon",
+    "commonName": "Peacock Gudgeon",
+    "alsoKnownAs": [
+      "Peacock Goby"
+    ],
+    "scientificName": "Tateurndina ocellicauda",
+    "careLevel": "beginner",
+    "adultSizeCm": 7,
+    "minTankSizeL": 40,
+    "tempMinC": 22,
+    "tempMaxC": 26,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 5,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 2,
+    "swimZone": "bottom",
+    "diet": "carnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 15,
+    "notes": [
+      "Colourful, peaceful nano fish that shows best kept in a small group or pairs.",
+      "Provide caves or small tubes; they are cave spawners and males guard the eggs.",
+      "Prefers meaty foods like frozen bloodworms, brine shrimp and small live foods over dry flake.",
+      "A calm, well-planted tank with gentle flow keeps their colours vivid and reduces shyness."
+    ],
+    "imageCredit": {
+      "author": "Haleybean",
+      "license": "CC BY 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Peacock_gudgeon_female.jpg"
+    },
+    "imageAsset": "peacock-gudgeon"
+  },
+  {
+    "id": "emerald-cory",
+    "commonName": "Emerald Cory",
+    "alsoKnownAs": [
+      "Emerald Green Cory",
+      "Emerald Catfish"
+    ],
+    "scientificName": "Corydoras splendens",
+    "careLevel": "beginner",
+    "adultSizeCm": 7,
+    "minTankSizeL": 80,
+    "tempMinC": 22,
+    "tempMaxC": 26,
+    "phMin": 6.0,
+    "phMax": 7.8,
+    "ghMin": 2,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "bottom",
+    "diet": "omnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 10,
+    "notes": [
+      "Keep in a group of 6+ on soft sand so their barbels don't get worn down or infected.",
+      "A slightly larger, deeper-bodied cory (formerly Brochis) with a green metallic sheen; give it open bottom swimming room.",
+      "Provide sinking pellets and frozen foods, and make sure it gets its share before faster mid-water fish clear the tank.",
+      "Peaceful and social; a great cleanup crew for community tanks but never keep it singly."
+    ],
+    "imageCredit": {
+      "author": "NonstickRon",
+      "license": "CC BY-SA 2.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Brochis_splendens_NonstickRon_(cropped).jpg"
+    },
+    "imageAsset": "emerald-cory"
+  },
+  {
+    "id": "bleeding-heart-tetra",
+    "commonName": "Bleeding Heart Tetra",
+    "alsoKnownAs": [
+      "Bleeding Heart"
+    ],
+    "scientificName": "Hyphessobrycon erythrostigma",
+    "careLevel": "intermediate",
+    "adultSizeCm": 6,
+    "minTankSizeL": 100,
+    "tempMinC": 23,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.0,
+    "ghMin": 3,
+    "ghMax": 12,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "finNipper": true,
+    "litersPerAdditionalIndividual": 12,
+    "notes": [
+      "Named for the red 'blood spot' on each flank; a larger, deep-bodied tetra that needs 100L+ and a decent shoal.",
+      "Keep 6 or more to spread out aggression; in small groups they turn nippy and pester tankmates.",
+      "Avoid pairing with slow, long-finned fish like bettas or fancy guppies that make tempting fin targets.",
+      "Likes soft, slightly acidic, tannin-stained water with planted cover to show its best colour."
+    ],
+    "imageCredit": {
+      "author": "Francesco Loda",
+      "license": "CC BY 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Hyphessobrycon_erythrostigma_-_20090109.jpeg"
+    },
+    "imageAsset": "bleeding-heart-tetra"
+  },
+  {
+    "id": "flame-tetra",
+    "commonName": "Flame Tetra",
+    "alsoKnownAs": [
+      "Von Rio Tetra",
+      "Rio Flame Tetra"
+    ],
+    "scientificName": "Hyphessobrycon flammeus",
+    "careLevel": "beginner",
+    "adultSizeCm": 3.5,
+    "minTankSizeL": 60,
+    "tempMinC": 22,
+    "tempMaxC": 28,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2,
+    "ghMax": 15,
+    "temperament": "peaceful",
+    "minGroupSize": 6,
+    "swimZone": "middle",
+    "diet": "omnivore",
+    "finNipper": false,
+    "litersPerAdditionalIndividual": 6,
+    "notes": [
+      "A hardy, forgiving little red tetra that tolerates a wide range of water and even cooler room temps.",
+      "Keep a shoal of 6+; the males colour up bright red and display to each other when kept in numbers.",
+      "Accepts flake and micro pellets readily; add occasional frozen foods to deepen their red colour.",
+      "Great beginner schooler for a planted community tank with darker substrate to show off their colour."
+    ],
+    "imageCredit": {
+      "author": "Graf zu Pappenheim",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Hyphessobrycon_flammeus_1.jpg"
+    },
+    "imageAsset": "flame-tetra"
   }
 ]
