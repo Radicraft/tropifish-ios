@@ -2,8 +2,8 @@ import SwiftUI
 
 /// The browsable "Plant Guide" (plant-tracking feature). Doubles as a picker when
 /// adding a plant to a tank: pass `onSelect` to switch into picker mode (tapping
-/// a row returns the plant and dismisses) — otherwise rows push the full detail.
-/// Mirrors `SpeciesBrowserView`.
+/// a card returns the plant and dismisses) — otherwise cards push the full
+/// detail. Adaptive grid, mirroring `SpeciesBrowserView`.
 struct PlantBrowserView: View {
     var onSelect: ((Plant) -> Void)?
 
@@ -11,18 +11,23 @@ struct PlantBrowserView: View {
     @State private var query = ""
 
     private var results: [Plant] { PlantCatalog.shared.search(query) }
+    private let columns = [GridItem(.adaptive(minimum: 330), spacing: 14)]
 
     var body: some View {
-        List {
+        ScrollView {
             if results.isEmpty {
                 ContentUnavailableView.search(text: query)
+                    .padding(.top, 60)
             } else {
-                ForEach(results) { plant in
-                    row(for: plant)
+                LazyVGrid(columns: columns, alignment: .leading, spacing: 14) {
+                    ForEach(results) { plant in
+                        card(for: plant)
+                    }
                 }
+                .padding()
             }
         }
-        .listStyle(.plain)
+        .background(Color(.systemGroupedBackground))
         .searchable(text: $query, prompt: "Search by name or species")
         .navigationTitle(onSelect == nil ? "Plant Guide" : "Add Plant")
         .navigationBarTitleDisplayMode(onSelect == nil ? .large : .inline)
@@ -36,26 +41,41 @@ struct PlantBrowserView: View {
     }
 
     @ViewBuilder
-    private func row(for plant: Plant) -> some View {
-        if let onSelect {
-            Button {
-                onSelect(plant)
-                dismiss()
-            } label: {
-                PlantRow(plant: plant)
-            }
-            .buttonStyle(.plain)
-        } else {
-            NavigationLink {
-                PlantDetailView(plant: plant)
-            } label: {
-                PlantRow(plant: plant)
+    private func card(for plant: Plant) -> some View {
+        Group {
+            if let onSelect {
+                Button {
+                    onSelect(plant)
+                    dismiss()
+                } label: {
+                    PlantRow(plant: plant).plantCardStyle()
+                }
+                .buttonStyle(.plain)
+            } else {
+                NavigationLink {
+                    PlantDetailView(plant: plant)
+                } label: {
+                    PlantRow(plant: plant).plantCardStyle()
+                }
+                .buttonStyle(.plain)
             }
         }
     }
 }
 
-/// One browser row: thumbnail, names, and small placement/light tags.
+private extension View {
+    func plantCardStyle() -> some View {
+        self
+            .padding(.horizontal, 12)
+            .padding(.vertical, 4)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color(.secondarySystemGroupedBackground),
+                        in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+}
+
+/// One browser card: thumbnail, names, and small placement/difficulty tags.
 struct PlantRow: View {
     let plant: Plant
 

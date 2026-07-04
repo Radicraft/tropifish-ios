@@ -31,6 +31,7 @@ struct SpeciesDetailView: View {
                         .id("compatibility")
                 }
                 .padding()
+                .readableWidth()
             }
             .navigationTitle(species.commonName)
             .navigationBarTitleDisplayMode(.inline)

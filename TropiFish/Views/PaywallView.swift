@@ -20,6 +20,7 @@ struct PaywallView: View {
                 }
                 .padding()
                 .padding(.bottom, 8)
+                .readableWidth(640)
             }
             .safeAreaInset(edge: .bottom) { purchaseBar }
             .navigationTitle("Unlock TropiFish")

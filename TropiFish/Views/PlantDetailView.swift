@@ -17,6 +17,7 @@ struct PlantDetailView: View {
                 }
             }
             .padding()
+            .readableWidth()
         }
         .navigationTitle(plant.commonName)
         .navigationBarTitleDisplayMode(.inline)

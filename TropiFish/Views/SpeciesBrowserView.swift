@@ -2,30 +2,39 @@ import SwiftUI
 
 /// The browsable "Fish Guide" (species-suitability feature). Doubles as a picker
 /// when adding a species to a tank's stock: pass `onSelect` to switch into
-/// picker mode (tapping a row returns the species and dismisses) — otherwise
-/// rows push the full species detail.
+/// picker mode (tapping a card returns the species and dismisses) — otherwise
+/// cards push the full species detail.
+///
+/// Laid out as an adaptive grid so it fills an iPad's width with several columns
+/// while collapsing to a single column on iPhone (and inside the narrow "Add
+/// Fish" sheet).
 struct SpeciesBrowserView: View {
     /// Non-nil puts the browser in picker mode.
     var onSelect: ((Species) -> Void)?
-    /// When picking for a specific tank, we can show a compatibility hint per row.
+    /// When picking for a specific tank, we can show a compatibility hint per card.
     var compatibilityTank: Tank?
 
     @Environment(\.dismiss) private var dismiss
     @State private var query = ""
 
     private var results: [Species] { SpeciesCatalog.shared.search(query) }
+    private let columns = [GridItem(.adaptive(minimum: 330), spacing: 14)]
 
     var body: some View {
-        List {
+        ScrollView {
             if results.isEmpty {
                 ContentUnavailableView.search(text: query)
+                    .padding(.top, 60)
             } else {
-                ForEach(results) { species in
-                    row(for: species)
+                LazyVGrid(columns: columns, alignment: .leading, spacing: 14) {
+                    ForEach(results) { species in
+                        card(for: species)
+                    }
                 }
+                .padding()
             }
         }
-        .listStyle(.plain)
+        .background(Color(.systemGroupedBackground))
         .searchable(text: $query, prompt: "Search by name or species")
         .navigationTitle(onSelect == nil ? "Fish Guide" : "Add Fish")
         .navigationBarTitleDisplayMode(onSelect == nil ? .large : .inline)
@@ -39,13 +48,14 @@ struct SpeciesBrowserView: View {
     }
 
     @ViewBuilder
-    private func row(for species: Species) -> some View {
+    private func card(for species: Species) -> some View {
         if let onSelect {
             Button {
                 onSelect(species)
                 dismiss()
             } label: {
                 SpeciesRow(species: species, compatibilityTank: compatibilityTank)
+                    .speciesCardStyle()
             }
             .buttonStyle(.plain)
         } else {
@@ -53,12 +63,28 @@ struct SpeciesBrowserView: View {
                 SpeciesDetailView(species: species)
             } label: {
                 SpeciesRow(species: species, compatibilityTank: nil)
+                    .speciesCardStyle()
             }
+            .buttonStyle(.plain)
         }
     }
 }
 
-/// One browser row: thumbnail, names, and a small care/temperament tag (or a
+private extension View {
+    /// Card chrome for a browser cell (grid tiles need their own background;
+    /// in a `List` the row provided it).
+    func speciesCardStyle() -> some View {
+        self
+            .padding(.horizontal, 12)
+            .padding(.vertical, 4)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color(.secondarySystemGroupedBackground),
+                        in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+}
+
+/// One browser card: thumbnail, names, and a small care/temperament tag (or a
 /// compatibility dot when picking for a specific tank).
 struct SpeciesRow: View {
     let species: Species

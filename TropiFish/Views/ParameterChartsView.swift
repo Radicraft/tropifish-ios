@@ -82,6 +82,7 @@ struct ParameterChartsView: View {
                 }
             }
             .padding()
+            .readableWidth()
         }
         .navigationTitle("Trends")
         .navigationBarTitleDisplayMode(.inline)
