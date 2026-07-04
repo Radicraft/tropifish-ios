@@ -12,6 +12,7 @@ enum ReviewGate {
     private static let d = UserDefaults.standard
     private static let countKey = "reviewTestsLogged"
     private static let askedKey = "reviewRequested"
+    private static let askedAfterUnlockKey = "reviewRequestedAfterUnlock"
     private static let trialStartKey = "trialStartDate"
 
     /// Minimum days since install before we'll ask, so brand-new users who
@@ -39,4 +40,14 @@ enum ReviewGate {
         guard days >= minDaysSinceInstall else { return false }
         return testsLogged >= testsThreshold || tankAllClear
     }
+
+    // MARK: - Post-unlock prompt
+
+    /// Completing the purchase is itself a strong positive signal, so we spend a
+    /// second prompt on it — tracked separately from the trial-milestone one so
+    /// the two never cannibalise each other (Apple still throttles if both would
+    /// land close together).
+    static var hasAskedAfterUnlock: Bool { d.bool(forKey: askedAfterUnlockKey) }
+    static func markAskedAfterUnlock() { d.set(true, forKey: askedAfterUnlockKey) }
+    static var shouldAskAfterUnlock: Bool { !hasAskedAfterUnlock }
 }

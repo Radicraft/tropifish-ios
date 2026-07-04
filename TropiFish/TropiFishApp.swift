@@ -35,6 +35,7 @@ struct TropiFishApp: App {
 /// shop without first drilling into a tank.
 struct RootTabView: View {
     @EnvironmentObject private var access: AccessManager
+    @Environment(\.requestReview) private var requestReview
     @State private var selection = 0
     @State private var guidePath: [Species] = []
     @State private var plantPath: [Plant] = []
@@ -82,6 +83,16 @@ struct RootTabView: View {
             .tag(2)
         }
         .onChange(of: selection) { _, _ in Haptics.selection() }
+        .onChange(of: access.isUnlocked) { wasUnlocked, isUnlocked in
+            // A completed purchase is a natural high point — ask for a review
+            // once the paywall has settled (throttled + one-shot by ReviewGate).
+            guard isUnlocked, !wasUnlocked, ReviewGate.shouldAskAfterUnlock else { return }
+            ReviewGate.markAskedAfterUnlock()
+            Task {
+                try? await Task.sleep(for: .seconds(1.2))
+                requestReview()
+            }
+        }
         .sheet(isPresented: $access.isShowingPaywall) {
             PaywallView()
         }
