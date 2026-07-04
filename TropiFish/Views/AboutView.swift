@@ -28,6 +28,11 @@ struct AboutView: View {
                             )
                     }
                     .buttonStyle(.plain)
+
+                    Text("\(AppInfo.versionString) · An app by \(AppInfo.studioName)")
+                        .font(.caption2)
+                        .foregroundStyle(.tertiary)
+                        .padding(.top, 4)
                 }
                 .padding(.horizontal, 24)
                 .padding(.vertical, 24)

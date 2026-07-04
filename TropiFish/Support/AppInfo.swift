@@ -3,6 +3,16 @@ import Foundation
 /// App-level constants and the canonical feature list, shared by the first-run
 /// `WelcomeView` and the always-available `AboutView` so the two never drift.
 enum AppInfo {
+    /// The studio behind the app, shown in the About screen and the disclaimer card.
+    static let studioName = "Radicraft"
+
+    /// Marketing version + build from the bundle, e.g. "Version 1.0 (1)".
+    static var versionString: String {
+        let v = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
+        let b = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"
+        return "Version \(v) (\(b))"
+    }
+
     /// Where the in-app "Get in touch" mail is addressed. This is the public
     /// support/feedback contact — confirm it before an App Store release.
     static let supportEmail = "mikesoft98@gmail.com"

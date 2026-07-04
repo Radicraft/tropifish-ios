@@ -90,7 +90,7 @@ struct MadeByKeepersCard: View {
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(.tint)
 
-            Text("TropiFish is made by hobbyists who keep these tanks ourselves. It's a **guide to use alongside your own judgement**, not a substitute for it — species data and safe ranges are sensible starting points, so always cross-check anything important for your fish.")
+            Text("TropiFish is made by \(AppInfo.studioName), a small studio of hobbyists who keep these tanks ourselves. It's a **guide to use alongside your own judgement**, not a substitute for it — species data and safe ranges are sensible starting points, so always cross-check anything important for your fish.")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
 
