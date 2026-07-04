@@ -56,9 +56,30 @@ enum SampleData {
         context.insert(planted)
         context.insert(TestReading(timestamp: daysAgo(2), ammoniaTAN: 0, nitrite: 0,
                                    nitrate: 15, kh: 5, gh: 8, ph: 6.8, temperatureC: 25, tank: planted))
-        context.insert(StockedSpecies(speciesID: "neon-tetra", quantity: 3, tank: planted))
+        let neons = StockedSpecies(speciesID: "neon-tetra", quantity: 3, tank: planted)
+        context.insert(neons)
         context.insert(StockedSpecies(speciesID: "harlequin-rasbora", quantity: 8, tank: planted))
         context.insert(StockedSpecies(speciesID: "bronze-cory", quantity: 6, tank: planted))
+        // A little history on the neons — added, lost one, and a health note.
+        context.insert(StockEvent(kind: .added, date: daysAgo(90), quantityDelta: 5,
+                                  note: "Started with a small shoal from the LFS.", stockedSpecies: neons))
+        context.insert(StockEvent(kind: .removed, date: daysAgo(30), quantityDelta: -2,
+                                  note: "Lost two — one jumped, one to old age.", stockedSpecies: neons))
+        context.insert(StockEvent(kind: .note, date: daysAgo(5),
+                                  note: "Colours have really deepened since the last water change.", stockedSpecies: neons))
+
+        // Planted-tank plants, with a trim log on the fast-growing stem plant.
+        let sword = StockedPlant(plantID: "amazon-sword", quantity: 1, dateAdded: daysAgo(120), tank: planted)
+        context.insert(sword)
+        context.insert(StockEvent(kind: .added, date: daysAgo(120), quantityDelta: 1,
+                                  note: "Centrepiece, root tabs underneath.", stockedPlant: sword))
+        let fern = StockedPlant(plantID: "java-fern", quantity: 3, dateAdded: daysAgo(120), tank: planted)
+        context.insert(fern)
+        context.insert(StockEvent(kind: .added, date: daysAgo(120), quantityDelta: 3,
+                                  note: "Tied to the driftwood.", stockedPlant: fern))
+        context.insert(StockEvent(kind: .trimmed, date: daysAgo(14),
+                                  note: "Removed a few older leaves with black spot.", stockedPlant: fern))
+        context.insert(StockedPlant(plantID: "amazon-frogbit", quantity: 1, dateAdded: daysAgo(60), tank: planted))
 
         // A cycling shrimp nano — ammonia present, but flagged as cycling.
         let shrimp = Tank(name: "Shrimp Nano", volumeLiters: 25,

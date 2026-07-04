@@ -12,11 +12,13 @@ struct TankDetailView: View {
     @State private var isLoggingWaterChange = false
     @State private var isEditingTank = false
     @State private var isAddingSpecies = false
+    @State private var isAddingPlant = false
     /// Set after adding a fish that isn't a clean match, to surface a warning.
     @State private var addWarning: CompatibilityReport?
     #if DEBUG
     @State private var debugShowCharts = ProcessInfo.processInfo.arguments.contains("-openCharts")
     @State private var debugShowFilter = ProcessInfo.processInfo.arguments.contains("-openFilterMedia")
+    @State private var debugShowStockLog = ProcessInfo.processInfo.arguments.contains("-openStockLog")
     #endif
 
     private var assessment: TankAssessment { AssessmentEngine.assess(tank: tank) }
@@ -44,6 +46,8 @@ struct TankDetailView: View {
             }
 
             stockSection
+
+            plantsSection
 
             Section {
                 NavigationLink {
@@ -82,6 +86,11 @@ struct TankDetailView: View {
                 SpeciesBrowserView(onSelect: addSpecies, compatibilityTank: tank)
             }
         }
+        .sheet(isPresented: $isAddingPlant) {
+            NavigationStack {
+                PlantBrowserView(onSelect: addPlant)
+            }
+        }
         .alert("Heads up", isPresented: Binding(
             get: { addWarning != nil },
             set: { if !$0 { addWarning = nil } }
@@ -96,6 +105,11 @@ struct TankDetailView: View {
         }
         .navigationDestination(isPresented: $debugShowFilter) {
             FilterMediaView(tank: tank)
+        }
+        .navigationDestination(isPresented: $debugShowStockLog) {
+            if let first = tank.stock.sorted(by: { $0.dateAdded < $1.dateAdded }).first {
+                StockedSpeciesDetailView(stocked: first)
+            }
         }
         #endif
     }
@@ -226,7 +240,7 @@ struct TankDetailView: View {
     private func stockRow(_ stocked: StockedSpecies) -> some View {
         if let species = stocked.species {
             NavigationLink {
-                SpeciesDetailView(species: species)
+                StockedSpeciesDetailView(stocked: stocked)
             } label: {
                 HStack(spacing: 12) {
                     SpeciesImage(species: species, cornerRadius: 6)
@@ -260,13 +274,18 @@ struct TankDetailView: View {
     }
 
     private func addSpecies(_ species: Species) {
-        // Merge into an existing entry if already stocked, else insert.
+        // Merge into an existing entry if already stocked, else insert. Either
+        // way, log an "added 1" history entry so the timeline stays truthful.
+        let entry: StockedSpecies
         if let existing = tank.stock.first(where: { $0.speciesID == species.id }) {
             existing.quantity += 1
+            entry = existing
         } else {
-            let entry = StockedSpecies(speciesID: species.id, tank: tank)
-            modelContext.insert(entry)
+            let created = StockedSpecies(speciesID: species.id, tank: tank)
+            modelContext.insert(created)
+            entry = created
         }
+        modelContext.insert(StockEvent(kind: .added, quantityDelta: 1, stockedSpecies: entry))
         // Warn if the newly-added fish isn't a clean match for the tank — the
         // haptic mirrors the outcome: a caution buzz with the alert, else a
         // satisfying confirm.
@@ -282,6 +301,77 @@ struct TankDetailView: View {
     private func deleteStock(at offsets: IndexSet) {
         Haptics.impact(.rigid)
         let sorted = tank.stock.sorted { $0.dateAdded < $1.dateAdded }
+        for index in offsets { modelContext.delete(sorted[index]) }
+    }
+
+    // MARK: - Plants
+
+    @ViewBuilder
+    private var plantsSection: some View {
+        Section {
+            ForEach(tank.plants.sorted { $0.dateAdded < $1.dateAdded }) { planted in
+                plantRow(planted)
+            }
+            .onDelete(perform: deletePlants)
+
+            Button {
+                isAddingPlant = true
+            } label: {
+                Label("Add Plant", systemImage: "leaf.fill")
+            }
+        } header: {
+            Text("Plants")
+        } footer: {
+            if tank.plants.isEmpty {
+                Text("Track the plants you keep, and log when you add, trim, or lose them.")
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func plantRow(_ planted: StockedPlant) -> some View {
+        if let plant = planted.plant {
+            NavigationLink {
+                StockedPlantDetailView(stocked: planted)
+            } label: {
+                HStack(spacing: 12) {
+                    PlantImage(plant: plant, cornerRadius: 6)
+                        .frame(width: 40, height: 40)
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text(plant.commonName)
+                        Text(plant.placement.displayName)
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                    Text("×\(planted.quantity)")
+                        .font(.callout.monospacedDigit())
+                        .foregroundStyle(.secondary)
+                }
+            }
+        } else {
+            Label(planted.plantID, systemImage: "questionmark.circle")
+                .foregroundStyle(.secondary)
+        }
+    }
+
+    private func addPlant(_ plant: Plant) {
+        let entry: StockedPlant
+        if let existing = tank.plants.first(where: { $0.plantID == plant.id }) {
+            existing.quantity += 1
+            entry = existing
+        } else {
+            let created = StockedPlant(plantID: plant.id, tank: tank)
+            modelContext.insert(created)
+            entry = created
+        }
+        modelContext.insert(StockEvent(kind: .added, quantityDelta: 1, stockedPlant: entry))
+        Haptics.success()
+    }
+
+    private func deletePlants(at offsets: IndexSet) {
+        Haptics.impact(.rigid)
+        let sorted = tank.plants.sorted { $0.dateAdded < $1.dateAdded }
         for index in offsets { modelContext.delete(sorted[index]) }
     }
 

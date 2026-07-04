@@ -1,0 +1,786 @@
+[
+  {
+    "id": "java-fern",
+    "commonName": "Java Fern",
+    "alsoKnownAs": [
+      "Water fern"
+    ],
+    "scientificName": "Microsorum pteropus",
+    "difficulty": "easy",
+    "lightNeed": "low",
+    "co2Need": "none",
+    "placement": "epiphyte",
+    "growthRate": "slow",
+    "tempMinC": 18.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 35.0,
+    "propagation": "Rhizome division and plantlets from leaves",
+    "notes": [
+      "Attach the rhizome to wood or rock with thread or glue and never bury it, as a buried rhizome will rot and die.",
+      "Extremely undemanding and thrives in low light without CO2, making it one of the best beginner plants.",
+      "Brown or black bumps on older leaves are baby plantlets, not disease, and can be detached to grow new ferns."
+    ],
+    "imageAsset": "java-fern",
+    "imageCredit": {
+      "author": "Tsunamicarlos at English Wikipedia",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Microsorum_pteropus.jpg"
+    }
+  },
+  {
+    "id": "anubias-nana",
+    "commonName": "Anubias Nana",
+    "alsoKnownAs": [
+      "Dwarf Anubias"
+    ],
+    "scientificName": "Anubias barteri var. nana",
+    "difficulty": "easy",
+    "lightNeed": "low",
+    "co2Need": "none",
+    "placement": "epiphyte",
+    "growthRate": "slow",
+    "tempMinC": 22.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 3.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 12.0,
+    "propagation": "Rhizome division",
+    "notes": [
+      "Tie or glue the rhizome to hardscape and keep it above the substrate, as burying it causes the rhizome to rot.",
+      "Its slow growth and tough leaves make it very resistant to being eaten by fish and even most plant-nipping cichlids.",
+      "Keep light modest, because strong light on such a slow grower encourages algae on the leaves."
+    ],
+    "imageAsset": "anubias-nana",
+    "imageCredit": {
+      "author": "Daderot",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Anubias_barteri_var._nana_-_Botanischer_Garten_-_Heidelberg,_Germany_-_DSC01278.jpg"
+    }
+  },
+  {
+    "id": "amazon-sword",
+    "commonName": "Amazon Sword",
+    "alsoKnownAs": [
+      "Echinodorus bleheri"
+    ],
+    "scientificName": "Echinodorus grisebachii",
+    "difficulty": "easy",
+    "lightNeed": "medium",
+    "co2Need": "beneficial",
+    "placement": "background",
+    "growthRate": "moderate",
+    "tempMinC": 22.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.5,
+    "phMax": 7.5,
+    "ghMin": 3.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 50.0,
+    "propagation": "Adventitious plantlets on flower stalks and runners",
+    "notes": [
+      "A heavy root feeder that grows best with nutrient-rich substrate or root tabs pushed near the roots.",
+      "Give it plenty of space, since a healthy plant can fill a large area and shade smaller plants below it.",
+      "New plants form on arching flower stalks and can be separated once they have their own roots and leaves."
+    ],
+    "imageAsset": "amazon-sword",
+    "imageCredit": {
+      "author": "Salvatore vitale",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Echinodorus_bleheri.jpg"
+    }
+  },
+  {
+    "id": "java-moss",
+    "commonName": "Java Moss",
+    "alsoKnownAs": [
+      "Vesicularia dubyana",
+      "Taxiphyllum barbieri"
+    ],
+    "scientificName": "Taxiphyllum barbieri",
+    "difficulty": "easy",
+    "lightNeed": "low",
+    "co2Need": "none",
+    "placement": "epiphyte",
+    "growthRate": "moderate",
+    "tempMinC": 15.0,
+    "tempMaxC": 28.0,
+    "phMin": 5.5,
+    "phMax": 8.0,
+    "ghMin": 2.0,
+    "ghMax": 20.0,
+    "maxHeightCm": 10.0,
+    "propagation": "Division of clumps",
+    "notes": [
+      "Tie or glue thin layers to wood, rock or mesh, since thick clumps trap detritus and rot underneath.",
+      "It tolerates a very wide range of temperatures and water conditions, making it nearly impossible to kill.",
+      "Provides ideal cover and grazing surface for shrimp and fish fry, so it is popular in breeding tanks."
+    ],
+    "imageAsset": "java-moss",
+    "imageCredit": {
+      "author": "阿橋 HQ",
+      "license": "CC BY-SA 2.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:%E7%88%AA%E5%93%87%E8%8E%AB%E7%B5%B2_Vesicularia_dubyana_-%E9%A6%99%E6%B8%AF%E5%85%AC%E5%9C%92_Hong_Kong_Park-_(9227115933).jpg"
+    }
+  },
+  {
+    "id": "cryptocoryne-wendtii",
+    "commonName": "Cryptocoryne Wendtii",
+    "alsoKnownAs": [
+      "Wendt's water trumpet",
+      "Crypt Wendtii"
+    ],
+    "scientificName": "Cryptocoryne wendtii",
+    "difficulty": "easy",
+    "lightNeed": "low",
+    "co2Need": "beneficial",
+    "placement": "midground",
+    "growthRate": "slow",
+    "tempMinC": 22.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 3.0,
+    "ghMax": 18.0,
+    "maxHeightCm": 25.0,
+    "propagation": "Runners producing daughter plants",
+    "notes": [
+      "Newly planted crypts often melt and lose all their leaves, but the roots survive and will regrow if left undisturbed.",
+      "Plant the roots in the substrate and add root tabs, as it is a root feeder that dislikes being moved.",
+      "Leaf color and size vary widely with light, ranging from green to bronze and red."
+    ],
+    "imageAsset": "cryptocoryne-wendtii",
+    "imageCredit": {
+      "author": "Haplochromis",
+      "license": "CC BY 2.5",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Cryptocoryne_wendtii.JPG"
+    }
+  },
+  {
+    "id": "vallisneria",
+    "commonName": "Vallisneria",
+    "alsoKnownAs": [
+      "Eelgrass",
+      "Tape grass",
+      "Jungle Val"
+    ],
+    "scientificName": "Vallisneria spiralis",
+    "difficulty": "easy",
+    "lightNeed": "medium",
+    "co2Need": "none",
+    "placement": "background",
+    "growthRate": "fast",
+    "tempMinC": 18.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.5,
+    "phMax": 8.5,
+    "ghMin": 4.0,
+    "ghMax": 18.0,
+    "maxHeightCm": 60.0,
+    "propagation": "Runners",
+    "notes": [
+      "Plant it so the white crown at the base of the leaves stays just above the substrate, or it may rot.",
+      "It spreads quickly by runners and can form a dense background jungle, so thin it regularly.",
+      "Sensitive to liquid carbon (glutaraldehyde) dosing, which can cause the leaves to melt."
+    ],
+    "imageAsset": "vallisneria",
+    "imageCredit": {
+      "author": "Show_ryu",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Vallisneria_asiatica.JPG"
+    }
+  },
+  {
+    "id": "water-wisteria",
+    "commonName": "Water Wisteria",
+    "alsoKnownAs": [
+      "Hygrophila difformis"
+    ],
+    "scientificName": "Hygrophila difformis",
+    "difficulty": "easy",
+    "lightNeed": "medium",
+    "co2Need": "beneficial",
+    "placement": "background",
+    "growthRate": "fast",
+    "tempMinC": 22.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 45.0,
+    "propagation": "Stem cuttings",
+    "notes": [
+      "A fast grower that absorbs excess nutrients from the water column and helps outcompete algae.",
+      "Leaf shape changes dramatically with light, from lacy and finely divided in bright light to broad in low light.",
+      "Replant the trimmed tops directly into the substrate to make new bushy plants."
+    ],
+    "imageAsset": "water-wisteria",
+    "imageCredit": {
+      "author": "Tsunamicarlos at English Wikipedia",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Hygrophila_difformis.jpg"
+    }
+  },
+  {
+    "id": "hornwort",
+    "commonName": "Hornwort",
+    "alsoKnownAs": [
+      "Coontail"
+    ],
+    "scientificName": "Ceratophyllum demersum",
+    "difficulty": "easy",
+    "lightNeed": "low",
+    "co2Need": "none",
+    "placement": "floating",
+    "growthRate": "fast",
+    "tempMinC": 15.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 5.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 60.0,
+    "propagation": "Stem cuttings and side shoots",
+    "notes": [
+      "Can be left floating or anchored, since it has no true roots and takes up nutrients through its stems.",
+      "An excellent fast-growing nutrient sponge that helps combat algae in new or unbalanced tanks.",
+      "It commonly sheds needles when first added or when conditions change, which is normal as it adjusts."
+    ],
+    "imageAsset": "hornwort",
+    "imageCredit": {
+      "author": "Javier martin",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Ceratophyllum_demersum_2010-8-14_RioMontoro_SierraMadrona.jpg"
+    }
+  },
+  {
+    "id": "rotala-rotundifolia",
+    "commonName": "Rotala Rotundifolia",
+    "alsoKnownAs": [
+      "Roundleaf toothcup",
+      "Dwarf rotala"
+    ],
+    "scientificName": "Rotala rotundifolia",
+    "difficulty": "medium",
+    "lightNeed": "medium",
+    "co2Need": "beneficial",
+    "placement": "background",
+    "growthRate": "fast",
+    "tempMinC": 22.0,
+    "tempMaxC": 28.0,
+    "phMin": 5.5,
+    "phMax": 7.5,
+    "ghMin": 2.0,
+    "ghMax": 12.0,
+    "maxHeightCm": 40.0,
+    "propagation": "Stem cuttings",
+    "notes": [
+      "Higher light and CO2 bring out pink, orange and red tones in the top leaves.",
+      "Pinch and trim the tops often to encourage dense, bushy side growth instead of leggy stems.",
+      "Replant trimmed tops to quickly build a full background hedge."
+    ],
+    "imageAsset": "rotala-rotundifolia",
+    "imageCredit": {
+      "author": "Ruff tuff cream puff",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Rotala_rotundifolia_2.jpg"
+    }
+  },
+  {
+    "id": "ludwigia-repens",
+    "commonName": "Ludwigia Repens",
+    "alsoKnownAs": [
+      "Creeping primrose-willow",
+      "Red ludwigia"
+    ],
+    "scientificName": "Ludwigia repens",
+    "difficulty": "easy",
+    "lightNeed": "medium",
+    "co2Need": "beneficial",
+    "placement": "background",
+    "growthRate": "moderate",
+    "tempMinC": 22.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 3.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 40.0,
+    "propagation": "Stem cuttings",
+    "notes": [
+      "One of the easier red-toned stem plants, showing deeper red with strong light and iron-rich dosing.",
+      "Trim and replant the tops to keep it compact and to propagate new stems.",
+      "Provides good color contrast when grouped behind green midground plants."
+    ],
+    "imageAsset": "ludwigia-repens",
+    "imageCredit": {
+      "author": "Show_ryu",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Ludwigia_repens.JPG"
+    }
+  },
+  {
+    "id": "bacopa-caroliniana",
+    "commonName": "Bacopa Caroliniana",
+    "alsoKnownAs": [
+      "Lemon bacopa",
+      "Blue waterhyssop"
+    ],
+    "scientificName": "Bacopa caroliniana",
+    "difficulty": "easy",
+    "lightNeed": "medium",
+    "co2Need": "beneficial",
+    "placement": "midground",
+    "growthRate": "moderate",
+    "tempMinC": 22.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 4.0,
+    "ghMax": 18.0,
+    "maxHeightCm": 30.0,
+    "propagation": "Stem cuttings",
+    "notes": [
+      "A hardy, slow-to-moderate stem plant that tolerates a wide range of water conditions.",
+      "Crushed leaves give off a faint lemon or mint scent, giving it the lemon bacopa nickname.",
+      "Thick, sturdy stems make it easy to plant and less likely to uproot than delicate stem plants."
+    ],
+    "imageAsset": "bacopa-caroliniana",
+    "imageCredit": {
+      "author": "User:BotBln",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Bacopa_caroliniana_BotGardBln07122011D.JPG"
+    }
+  },
+  {
+    "id": "dwarf-sagittaria",
+    "commonName": "Dwarf Sagittaria",
+    "alsoKnownAs": [
+      "Awl-leaf arrowhead",
+      "Dwarf sag"
+    ],
+    "scientificName": "Sagittaria subulata",
+    "difficulty": "easy",
+    "lightNeed": "medium",
+    "co2Need": "beneficial",
+    "placement": "foreground",
+    "growthRate": "moderate",
+    "tempMinC": 20.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 3.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 15.0,
+    "propagation": "Runners",
+    "notes": [
+      "Spreads by runners to form a grassy carpet and can be a low-tech alternative to fussier carpet plants.",
+      "Leaf height depends on light, staying short in bright light and stretching taller in dim tanks.",
+      "Pin down or trim stray runners to keep it from spreading into other plantings."
+    ],
+    "imageAsset": "dwarf-sagittaria",
+    "imageCredit": {
+      "author": "Daderot",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Sagittaria_subulata_-_Copenhagen_Botanical_Garden_-_DSC07957.JPG"
+    }
+  },
+  {
+    "id": "micro-sword",
+    "commonName": "Micro Sword",
+    "alsoKnownAs": [
+      "Brazilian micro sword",
+      "Copragrass"
+    ],
+    "scientificName": "Lilaeopsis brasiliensis",
+    "difficulty": "medium",
+    "lightNeed": "high",
+    "co2Need": "beneficial",
+    "placement": "foreground",
+    "growthRate": "slow",
+    "tempMinC": 18.0,
+    "tempMaxC": 26.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 3.0,
+    "ghMax": 12.0,
+    "maxHeightCm": 7.0,
+    "propagation": "Runners",
+    "notes": [
+      "Forms a short grass-like foreground carpet but needs strong light to grow flat instead of tall.",
+      "Plant in small clumps spaced apart and let runners fill the gaps over time.",
+      "CO2 and a nutrient-rich substrate greatly speed up its otherwise slow carpeting."
+    ],
+    "imageAsset": "micro-sword",
+    "imageCredit": {
+      "author": "Daderot",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Lilaeopsis_brasiliensis_-_Victoriahuset,_Bergianska_tr%C3%A4dg%C3%A5rden_-_Stockholm,_Sweden_-_DSC00261.JPG"
+    }
+  },
+  {
+    "id": "glossostigma-elatinoides",
+    "commonName": "Glossostigma",
+    "alsoKnownAs": [
+      "Glosso",
+      "Mud mat"
+    ],
+    "scientificName": "Glossostigma elatinoides",
+    "difficulty": "advanced",
+    "lightNeed": "high",
+    "co2Need": "required",
+    "placement": "foreground",
+    "growthRate": "moderate",
+    "tempMinC": 20.0,
+    "tempMaxC": 27.0,
+    "phMin": 5.5,
+    "phMax": 7.5,
+    "ghMin": 1.0,
+    "ghMax": 10.0,
+    "maxHeightCm": 3.0,
+    "propagation": "Runners and division",
+    "notes": [
+      "One of the shortest carpeting plants, but it demands intense light and CO2 to stay low and tight.",
+      "Without enough light it grows upward and leggy, so it is best suited to high-tech setups.",
+      "Trim the carpet regularly to keep lower layers from being shaded and dying off."
+    ],
+    "imageAsset": "glossostigma-elatinoides",
+    "imageCredit": {
+      "author": "Wilcox, Mike",
+      "license": "CC BY 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Glossostigma_elatinoides_Benth._ex_Hook.f._(AM_AK350592).jpg"
+    }
+  },
+  {
+    "id": "dwarf-hairgrass",
+    "commonName": "Dwarf Hairgrass",
+    "alsoKnownAs": [
+      "Needle spikerush"
+    ],
+    "scientificName": "Eleocharis acicularis",
+    "difficulty": "medium",
+    "lightNeed": "high",
+    "co2Need": "beneficial",
+    "placement": "foreground",
+    "growthRate": "moderate",
+    "tempMinC": 18.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2.0,
+    "ghMax": 12.0,
+    "maxHeightCm": 10.0,
+    "propagation": "Runners",
+    "notes": [
+      "Plant small tufts a few centimeters apart and they will send out runners to knit into a grassy lawn.",
+      "Strong light and CO2 keep the blades short and encourage horizontal carpeting rather than tall growth.",
+      "Trimming the tops with scissors stimulates denser, thicker runner growth."
+    ],
+    "imageAsset": "dwarf-hairgrass",
+    "imageCredit": {
+      "author": "Dean Wm. Taylor",
+      "license": "CC BY 2.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:YM-YOSE232097_Eleocharis_acicularis_var._acicularis_(8000558051).jpg"
+    }
+  },
+  {
+    "id": "marsilea-hirsuta",
+    "commonName": "Marsilea Hirsuta",
+    "alsoKnownAs": [
+      "Water clover"
+    ],
+    "scientificName": "Marsilea hirsuta",
+    "difficulty": "medium",
+    "lightNeed": "medium",
+    "co2Need": "beneficial",
+    "placement": "foreground",
+    "growthRate": "slow",
+    "tempMinC": 20.0,
+    "tempMaxC": 26.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2.0,
+    "ghMax": 12.0,
+    "maxHeightCm": 5.0,
+    "propagation": "Runners",
+    "notes": [
+      "A hardy carpeting fern that grows slowly but tolerates lower light than most foreground plants.",
+      "Leaf form varies with conditions, from single rounded blades to four-leaf clover shapes.",
+      "Bright light keeps it low and clover-like, while dim light makes it grow taller single leaves."
+    ],
+    "imageAsset": "marsilea-hirsuta",
+    "imageCredit": {
+      "author": "Daderot",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Marsilea_hirsuta_-_Victoriahuset,_Bergianska_tr%C3%A4dg%C3%A5rden_-_Stockholm,_Sweden_-_DSC00253.JPG"
+    }
+  },
+  {
+    "id": "bucephalandra",
+    "commonName": "Bucephalandra",
+    "alsoKnownAs": [
+      "Buce"
+    ],
+    "scientificName": "Bucephalandra motleyana",
+    "difficulty": "easy",
+    "lightNeed": "low",
+    "co2Need": "beneficial",
+    "placement": "epiphyte",
+    "growthRate": "slow",
+    "tempMinC": 22.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 3.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 10.0,
+    "propagation": "Rhizome division",
+    "notes": [
+      "Like Anubias, attach the rhizome to hardscape and never bury it, or the rhizome will rot.",
+      "Newly imported plants often melt back but usually regrow from the rhizome if left in place.",
+      "Slow growth and low light needs make it prone to algae, so avoid overly bright lighting."
+    ],
+    "imageAsset": "bucephalandra",
+    "imageCredit": {
+      "author": "Krzysztof Ziarnek, Kenraiz",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Bucephalandra_motleyana_kz01.jpg"
+    }
+  },
+  {
+    "id": "christmas-moss",
+    "commonName": "Christmas Moss",
+    "alsoKnownAs": [
+      "Xmas moss",
+      "Vesicularia montagnei"
+    ],
+    "scientificName": "Vesicularia montagnei",
+    "difficulty": "easy",
+    "lightNeed": "low",
+    "co2Need": "beneficial",
+    "placement": "epiphyte",
+    "growthRate": "slow",
+    "tempMinC": 18.0,
+    "tempMaxC": 27.0,
+    "phMin": 5.5,
+    "phMax": 7.5,
+    "ghMin": 2.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 5.0,
+    "propagation": "Division of clumps",
+    "notes": [
+      "Named for its triangular, overlapping fronds that resemble tiny fir branches when grown well.",
+      "Tie thin layers to wood or mesh and keep water moving, since it prefers cooler, well-flowing water.",
+      "Grows more slowly than Java moss but forms a neater, more attractive shape."
+    ],
+    "imageAsset": "christmas-moss",
+    "imageCredit": {
+      "author": "Storm from Canada",
+      "license": "CC BY-SA 2.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Christmas_moss_and_riccia_(14441185564).jpg"
+    }
+  },
+  {
+    "id": "duckweed",
+    "commonName": "Duckweed",
+    "alsoKnownAs": [
+      "Lesser duckweed",
+      "Common duckweed"
+    ],
+    "scientificName": "Lemna minor",
+    "difficulty": "easy",
+    "lightNeed": "low",
+    "co2Need": "none",
+    "placement": "floating",
+    "growthRate": "fast",
+    "tempMinC": 15.0,
+    "tempMaxC": 30.0,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 2.0,
+    "ghMax": 20.0,
+    "maxHeightCm": 1.0,
+    "propagation": "Budding and division",
+    "notes": [
+      "Grows extremely fast and soaks up excess nutrients, but it can quickly blanket the entire surface.",
+      "Nearly impossible to fully remove once established, so add it only if you want a permanent floater.",
+      "Reduces light reaching plants below, which can be used to shade the tank or to fight algae."
+    ],
+    "imageAsset": "duckweed",
+    "imageCredit": {
+      "author": "Kostka Martin",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Lemna_minor_plants.jpg"
+    }
+  },
+  {
+    "id": "amazon-frogbit",
+    "commonName": "Amazon Frogbit",
+    "alsoKnownAs": [
+      "West Indian spongeplant",
+      "Smooth frogbit"
+    ],
+    "scientificName": "Limnobium laevigatum",
+    "difficulty": "easy",
+    "lightNeed": "medium",
+    "co2Need": "none",
+    "placement": "floating",
+    "growthRate": "fast",
+    "tempMinC": 20.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 3.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 20.0,
+    "propagation": "Daughter plants on runners",
+    "notes": [
+      "Floating rosettes send down long trailing roots that provide cover and take up excess nutrients.",
+      "Keep water droplets and condensation off the leaves, as wet leaves tend to rot and melt.",
+      "Leave an air gap between the water and the lid so the emersed leaves have room and do not overheat."
+    ],
+    "imageAsset": "amazon-frogbit",
+    "imageCredit": {
+      "author": "Cardex",
+      "license": "Public domain",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Limnobium_laevigatum.JPG"
+    }
+  },
+  {
+    "id": "red-root-floater",
+    "commonName": "Red Root Floater",
+    "alsoKnownAs": [
+      "Floating spurge"
+    ],
+    "scientificName": "Phyllanthus fluitans",
+    "difficulty": "medium",
+    "lightNeed": "high",
+    "co2Need": "beneficial",
+    "placement": "floating",
+    "growthRate": "moderate",
+    "tempMinC": 22.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.0,
+    "ghMin": 2.0,
+    "ghMax": 12.0,
+    "maxHeightCm": 3.0,
+    "propagation": "Daughter plants",
+    "notes": [
+      "Strong overhead light and iron turn the roots and leaf edges a deep red, which is the main appeal.",
+      "Dislikes surface agitation, so reduce flow and spray so the leaves stay dry and do not rot.",
+      "Grows more slowly than duckweed or frogbit, making it easier to keep under control."
+    ],
+    "imageAsset": "red-root-floater",
+    "imageCredit": {
+      "author": "Agnieszka Kwiecień, Nova",
+      "license": "CC BY-SA 4.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Phyllanthus_fluitans_2010-06-20_01.jpg"
+    }
+  },
+  {
+    "id": "pogostemon-helferi",
+    "commonName": "Pogostemon Helferi",
+    "alsoKnownAs": [
+      "Downoi",
+      "Little star"
+    ],
+    "scientificName": "Pogostemon helferi",
+    "difficulty": "medium",
+    "lightNeed": "high",
+    "co2Need": "required",
+    "placement": "midground",
+    "growthRate": "moderate",
+    "tempMinC": 22.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 3.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 10.0,
+    "propagation": "Side shoots and division",
+    "notes": [
+      "Prized for its crinkled, curly star-shaped leaves that form a low, compact clump.",
+      "Needs strong light and CO2 to stay tight and bushy rather than stretched and pale.",
+      "Sensitive to a lack of nutrients, so keep it well fed to avoid stunting and holes in the leaves."
+    ],
+    "imageAsset": "pogostemon-helferi",
+    "imageCredit": {
+      "author": "DatHalfdanr",
+      "license": "CC0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Pogostemon-helferi-4.png"
+    }
+  },
+  {
+    "id": "staurogyne-repens",
+    "commonName": "Staurogyne Repens",
+    "alsoKnownAs": [
+      "Staurogyne",
+      "S. repens"
+    ],
+    "scientificName": "Staurogyne repens",
+    "difficulty": "medium",
+    "lightNeed": "medium",
+    "co2Need": "beneficial",
+    "placement": "foreground",
+    "growthRate": "moderate",
+    "tempMinC": 20.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 8.0,
+    "ghMin": 3.0,
+    "ghMax": 15.0,
+    "maxHeightCm": 10.0,
+    "propagation": "Stem cuttings",
+    "notes": [
+      "A bushy low-growing stem plant that works as a foreground or lush midground bush.",
+      "Trim the tops to encourage side shoots and a dense, spreading habit close to the substrate.",
+      "More forgiving than most carpet plants, tolerating moderate light though it stays fuller with CO2."
+    ],
+    "imageAsset": "staurogyne-repens",
+    "imageCredit": {
+      "author": "호로조",
+      "license": "CC BY-SA 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:S._repens_in_a_tank.jpg"
+    }
+  },
+  {
+    "id": "cabomba",
+    "commonName": "Cabomba",
+    "alsoKnownAs": [
+      "Carolina fanwort",
+      "Green cabomba"
+    ],
+    "scientificName": "Cabomba caroliniana",
+    "difficulty": "medium",
+    "lightNeed": "high",
+    "co2Need": "beneficial",
+    "placement": "background",
+    "growthRate": "fast",
+    "tempMinC": 18.0,
+    "tempMaxC": 28.0,
+    "phMin": 6.0,
+    "phMax": 7.5,
+    "ghMin": 2.0,
+    "ghMax": 12.0,
+    "maxHeightCm": 60.0,
+    "propagation": "Stem cuttings",
+    "notes": [
+      "Its feathery fan-shaped leaves are attractive but shed easily if light is too low or flow is too strong.",
+      "Needs bright light to stay full, otherwise the lower stems go bare and drop leaves.",
+      "Plant stems individually with a little space so light reaches the delicate lower foliage."
+    ],
+    "imageAsset": "cabomba",
+    "imageCredit": {
+      "author": "Leslie J. Mehrhoff, University of Connecticut, Bugwood.org",
+      "license": "CC BY 3.0",
+      "sourceURL": "https://commons.wikimedia.org/wiki/File:Cabomba_caroliniana_5447098.jpg"
+    }
+  }
+]

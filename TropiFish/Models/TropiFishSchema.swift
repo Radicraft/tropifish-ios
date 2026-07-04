@@ -17,7 +17,9 @@ enum TropiFishSchema {
         TestReading.self,
         WaterChangeEvent.self,
         FilterMediaItem.self,
-        StockedSpecies.self
+        StockedSpecies.self,
+        StockedPlant.self,
+        StockEvent.self
     ]
 
     static var schema: Schema { Schema(models) }

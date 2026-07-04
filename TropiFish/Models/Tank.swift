@@ -56,6 +56,10 @@ final class Tank {
     @Relationship(deleteRule: .cascade, inverse: \StockedSpecies.tank)
     var stock: [StockedSpecies] = []
 
+    // Plants kept in this tank (plant-tracking feature).
+    @Relationship(deleteRule: .cascade, inverse: \StockedPlant.tank)
+    var plants: [StockedPlant] = []
+
     init(
         name: String,
         volumeLiters: Double,

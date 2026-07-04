@@ -89,6 +89,29 @@ enum WaterParameter: String, CaseIterable, Identifiable {
         }
     }
 
+    /// Reference band used to normalise this parameter onto a shared 0–100%
+    /// "% of healthy range" axis for the combined overlay chart. Unlike
+    /// `range(in:)` this is always defined: ammonia uses 0→its caution tier and
+    /// nitrite uses 0→a nominal 0.25 ppm toxicity marker (both are "keep near
+    /// zero", so 100% reads as "at the unsafe line"). The rest reuse their safe
+    /// band, so 0–100% spans exactly the healthy range.
+    func referenceBand(in targets: ParameterTargets) -> ClosedRange<Double> {
+        switch self {
+        case .ammonia: return 0...targets.ammoniaThresholds.caution
+        case .nitrite: return 0...0.25
+        default:       return range(in: targets) ?? 0...1
+        }
+    }
+
+    /// Position a real value on the 0–100(+) normalised scale for the combined
+    /// chart. Values above the band read past 100%, below read negative.
+    func normalized(_ value: Double, in targets: ParameterTargets) -> Double {
+        let band = referenceBand(in: targets)
+        let span = band.upperBound - band.lowerBound
+        guard span > 0 else { return 0 }
+        return (value - band.lowerBound) / span * 100
+    }
+
     /// Number of decimal places appropriate for this parameter's display.
     var fractionDigits: Int {
         switch self {

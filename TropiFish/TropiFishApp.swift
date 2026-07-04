@@ -33,6 +33,7 @@ struct TropiFishApp: App {
 struct RootTabView: View {
     @State private var selection = 0
     @State private var guidePath: [Species] = []
+    @State private var plantPath: [Plant] = []
 
     var body: some View {
         TabView(selection: $selection) {
@@ -57,6 +58,24 @@ struct RootTabView: View {
             }
             .tabItem { Label("Fish Guide", systemImage: "fish.fill") }
             .tag(1)
+
+            NavigationStack(path: $plantPath) {
+                PlantBrowserView(onSelect: nil)
+                    .navigationDestination(for: Plant.self) { plant in
+                        PlantDetailView(plant: plant)
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .primaryAction) {
+                            NavigationLink {
+                                ImageCreditsView()
+                            } label: {
+                                Label("Photo Credits", systemImage: "info.circle")
+                            }
+                        }
+                    }
+            }
+            .tabItem { Label("Plant Guide", systemImage: "leaf.fill") }
+            .tag(2)
         }
         .onChange(of: selection) { _, _ in Haptics.selection() }
         #if DEBUG
@@ -78,6 +97,15 @@ struct RootTabView: View {
             }
         }
         if args.contains("-openFishGuide") { selection = 1 }
+        if let arg = args.first(where: { $0.hasPrefix("-openPlant=") }) {
+            let slug = arg.replacingOccurrences(of: "-openPlant=", with: "")
+            if let plant = PlantCatalog.shared.byID(slug) {
+                selection = 2
+                plantPath = [plant]
+                return
+            }
+        }
+        if args.contains("-openPlantGuide") { selection = 2 }
     }
     #endif
 }

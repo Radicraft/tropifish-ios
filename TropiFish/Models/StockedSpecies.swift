@@ -21,6 +21,10 @@ final class StockedSpecies {
 
     var tank: Tank?
 
+    /// Dated history for this inhabitant — added/removed/health notes.
+    @Relationship(deleteRule: .cascade, inverse: \StockEvent.stockedSpecies)
+    var events: [StockEvent] = []
+
     init(
         speciesID: String,
         quantity: Int = 1,
@@ -39,4 +43,9 @@ final class StockedSpecies {
 extension StockedSpecies {
     /// Resolve the reference species from the bundled catalog, if present.
     var species: Species? { SpeciesCatalog.shared.byID(speciesID) }
+
+    /// History newest-first for display.
+    var eventsByDateDescending: [StockEvent] {
+        events.sorted { $0.date > $1.date }
+    }
 }
